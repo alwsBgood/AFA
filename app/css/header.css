@@ -1,11 +1,30 @@
 body {
   position: relative;
-  font: 18px/24px "OpenSans", sans-serif;
+  font: 16px/24px "OpenSans", sans-serif;
   color: #8b8b8b;
   background-color: #fff; }
 
 body.unscroll {
   overflow: hidden; }
+
+h2 {
+  color: #373a3f;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase; }
+
+.text--title {
+  font-family: "Webnar-Bold", sans-serif; }
+
+.text--blue {
+  color: #4d81ee; }
+
+.title {
+  color: #373a3f;
+  font-size: 20px; }
+
+.text {
+  letter-spacing: .02em; }
 
 .md-modal.md-show {
   opacity: 1; }
@@ -70,12 +89,82 @@ body.unscroll {
   background: #4d81ee; }
 
 .btn {
-  width: 300px;
-  height: 60px;
-  background-color: #4d81ee;
-  color: #000;
-  font: 20px "OpenSans", sans-serif;
-  text-transform: uppercase; }
+  width: 200px;
+  height: 50px;
+  background-color: #2167fb;
+  color: #f0f0f0;
+  font: 12px/18px "OpenSans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .3em; }
+  .btn:hover {
+    background-color: #fb7657; }
+  .btn:active {
+    background-color: #d05b40; }
 
-.btn:active {
-  background-color: #edcc00; }
+.btn_call {
+  width: 197px;
+  height: 40px;
+  border: 2px solid #9e9e9e;
+  color: #000000;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .3em; }
+  .btn_call:hover {
+    background-color: #2167fb;
+    border: 2px solid #2167fb;
+    color: #f0f0f0; }
+  .btn_call:active {
+    background-color: #144fcb;
+    border: 2px solid #144fcb; }
+
+#sec_01 {
+  padding: 35px 0 215px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url(../img/sec_01-bg.jpg); }
+  #sec_01 .nav {
+    display: inline-block;
+    margin-top: 7px; }
+    #sec_01 .nav li {
+      display: inline-block; }
+    #sec_01 .nav li + li {
+      margin-left: 25px; }
+    #sec_01 .nav a {
+      color: #8b8b8b; }
+      #sec_01 .nav a:hover {
+        color: #4d81ee; }
+  #sec_01 .btn_call {
+    float: right; }
+  #sec_01 .top {
+    margin-bottom: 195px; }
+  #sec_01 .beforeheader {
+    color: #f0f0f0;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+    letter-spacing: .5em; }
+  #sec_01 h1 {
+    font-size: 60px;
+    line-height: 76px;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    margin-bottom: 25px; }
+    #sec_01 h1 span {
+      font-size: 72px;
+      line-height: 82px;
+      text-transform: uppercase;
+      display: block;
+      padding-left: 100px;
+      position: relative; }
+      #sec_01 h1 span:before {
+        content: "";
+        position: absolute;
+        width: 84px;
+        height: 5px;
+        top: 50%;
+        margin-top: -2.5px;
+        left: 0;
+        background-color: #f0f0f0; }
+  #sec_01 .afterheader {
+    letter-spacing: .02em;
+    margin-bottom: 35px; }

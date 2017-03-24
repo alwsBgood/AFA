@@ -65,76 +65,570 @@
 <div class="bar-long"></div>
 <div id="scrollup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286.054 286.054"><path d="M143.027 0C64.04 0 0 64.04 0 143.027c0 78.996 64.04 143.027 143.027 143.027s143.027-64.03 143.027-143.027C286.054 64.05 222.014 0 143.027 0zm0 259.236c-64.183 0-116.21-52.026-116.21-116.21s52.027-116.2 116.21-116.2 116.21 52.018 116.21 116.2-52.027 116.21-116.21 116.21zm51.677-125.148h-24.86V89.392c0-4.934-3.996-8.94-8.94-8.94H125.15c-4.934 0-8.94 4.006-8.94 8.94v44.696H91.342c-9.698 0-13.667 6.463-8.822 14.338l51.686 51.096c4.845 7.884 12.783 7.884 17.637 0l51.678-51.096c4.863-7.875.894-14.338-8.814-14.338z"/></svg></div>
 
-<form  method="POST" class="form-inline db-form" action="javascript:void(null);">
 
-    <!-- Hidden DB Fields -->
+<div id="sec_01">
+    <div class="container">
+        <div class="row top">
+            <div class="col-2">
+                <img src="img/logo.png" alt="AFA Логотип" class="logo">
+            </div>
+            <div class="col-10">
+                <ul class="nav text--title">
+                    <li><a href="#sec_02" class="scroll">Что такое P2p</a></li>
+                    <li><a href="#sec_07" class="scroll">Как это работает</a></li>
+                    <li><a href="#sec_09" class="scroll">Почему AFA</a></li>
+                    <li><a href="#sec_13" class="scroll">Отзывы</a></li>
+                    <li><a href="#sec_05" class="scroll">Калькулятор</a></li>
+                </ul>
+                <a class="md-trigger text--title btn_call flex" data-modal="modal_callback"><span>мы перезвоним</span></a>
+            </div>
+        </div>
 
-    <input type="hidden" id="registrationType" name="registrationType" value="default_registration">
-    <input type="hidden" id="orderType" name="orderType" value="Zayavka">
-    <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
-    <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
-    <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
-    <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
-    <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
-    <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
-    <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
-    <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
-    <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
-    <input type="hidden" name="city" value="">
-    <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
-    <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
-    <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
-    <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
-    <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
-    <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
+        <div class="row">
+            <div class="col-12">
+                <p class="beforeheader text--title">Advance finance alliance</p>
+                <h1 class="text--title"><span>P2P</span>финансирование <br> в Украине</h1>
+                <p class="text--blue afterheader">Получите займ под залог недвижимости за один день</p>
+                <a href="#sec_02" class="btn flex scroll">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Zoho -->
-<!--     <input type="hidden" name="product_id" value="2167809000000656177">
-    <input type="hidden" name="product_name" value="&laquo;BootCamp 2&raquo;"> -->
-    <!-- Zoho -->
-
-    <!-- END Hidden DB Fields -->
-
-    <!-- Hidden Required Fields -->
-    <input type="hidden" name="project_name" value="CompanyName">
-    <input type="hidden" name="admin_email" value="alien_202@mail.ru">
-    <input type="hidden" name="goal" value="conversion_1">
-    <input type="hidden" name="form_type" value="firstForm ">
-    <!-- END Hidden Required Fields -->
-
-    <span class="field">
-        <input type="text" class="form-control" name="name" required=""  placeholder="Ваше имя " />
-        <span class="bar"></span>
-    </span>
-
-
-    <span class="field">
-        <input placeholder="Ваш телефон" type="tel" class="form-control" name="custom_tel" required="">
-        <span class="bar"></span>
-    </span>
-
-    <span class="field">
-        <input type="email" required="" placeholder="Ваш E-Mail" name="email" class="form-control">
-        <span class="bar"></span>
-    </span>
-
-
-    <button type="submit" class="btn" name="send">Отправить</button>
-
-    <!-- Просто любое дополнительное поле -->
-    <!-- <input type="hidden" name="other_data" value="Любое значение" /> -->
-    <!-- Динамическое дополнительное поле для передачи данных с кнопок по всему сайту -->
-    <input type="hidden" class="pacet" name="form_pacet" value="">
-    <!-- GET RESPONCE INPUTS -->
-    <input type="hidden" name="start_day" value="0"/>
-    <!-- Если нужно отправлять и на почту и на GetResponse - указываем campaign_token -->
-    <input type="hidden" name="campaign_token" value=""/>
-    <!-- GET RESPONCE INPUTS -->
-    <div class="clear"></div>
+<div id="sec_02">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <h2 class="text--title">Что <br> такое <br> P2P</h2>
+                <img src="img/line_horizontal.png" alt="Разделитель " class="separator">
+            </div>
+            <div class="col-3">
+                <div class="item">
+                    <p class="text--title title">P2P (“person-to-person” или “равноправное кредитование”)</p>
+                    <p class="text">Это прямое финансирование от инвестора к заемщику без участия банков или кредитных организаций. Система работает благодаря компаниям, которые помогают инвесторам и заемщикам найти друг друга и договориться о взаимовыгодном сотрудничестве. </p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="item">
+                    <p class="text--title title">P2P кредитование начало активно развиваться в Европе и США в 2005 году</p>
+                    <p class="text">Уже в 2016 рынок прямого финансирования вырос до 64 миллиардов долларов. В Украине же Р2Р появилось гораздо позже, однако всего <br> за пару лет рынок прямого кредитования в нашей стране достиг 5 миллиардов гривен. </p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="item">
+                    <p class="text--title title">Сейчас Р2Р — самый быстрорастущий сегмент на рынке мировых кредитов</p>
+                    <p class="text">Благодаря простоте и прозрачности системы Р2Р, сегодня равноправным финансированием пользуются миллионы людей по всему миру. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-</form>
+<div class="lineblock">
+    <p class="text--title line_block--text">growth</p>
+    <img class="line" src="img/line.png" alt="График роста вашей прибыли с AFA">
+    <img class="line-2" src="img/line.png" alt="График роста вашей прибыли с AFA">
+</div>
 
+<div id="sec_03">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <!-- <div class="youtube"></div> -->
+                <img src="img/video.png" alt="">
+            </div>
+            <div class="col-6">
+                <h2 class="text--title">Преимущества <br> P2P кредитования</h2>
+                <div class="item">
+                    <p class="text--title title">Посмотрите этот мультфильм</p>
+                    <p class="text"> — он интересно и доступно расскажет вам <br> про преимущества P2P финансирования. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_04">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text--title">Advance <br> Finance Alliance</h2>
+                <div class="item">
+                    <p class="text--title title">AFA — компания</p>
+                    <p class="text">Которая работает с залоговым P2P финансированием в Украине. <br> Залогом может выступать жилая / коммерческая недвижимость, <br> которая находится в Киеве / Киевской области.</p>
+                </div>
+                <div class="item">
+                    <p class="text--title title">AFA предоставляет  <br> полное сопровождение сделки:</p>
+                    <p class="text">От первой встречи, где мы подбираем для клиента  <br> необходимые условия, до полного  закрытия сделки. </p>
+                </div>
+                <img src="img/line_vertical.png" alt="Разделитель" class="separator">
+            </div>
+            <div class="col-6">
+                <img src="img/sec_04-img.png" alt="Сотрудничество с AFA" class="sec_img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_05"></div>
+
+<div id="sec_06">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 tc">
+                <h2 class="text--title">КРЕДИТНЫЕ ПРОГРАММЫ</h2>
+                <img src="img/line_hrz_blue.png" alt="Разделитель" class="separator">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table>
+                    <tr class="text--title">
+                        <td></td>
+                        <td>В долларах <br> США</td>
+                        <td>Особые <br> условия</td>
+                        <td>Максимальная</td>
+                        <td>Авансовый <br> платеж</td>
+                        <td>В гривне</td>
+                    </tr>
+                    <tr>
+                        <td class="title text--title"><span>Процентная  <br> ставка по займу  <br> / месяц</span></td>
+                        <td>2,5 % <br> (30% год.)</td>
+                        <td>От 2,2% <br> до 3 % <br> (26% год.)</td>
+                        <td>2,9% <br> (34,8% год.)</td>
+                        <td>От 2 до 3% <br> (24% год.)</td>
+                        <td>От 2 до 3% <br> (24% год.)</td>
+                    </tr>
+                    <tr>
+                        <td class="title text--title"><span>Комиссия</span></td>
+                        <td>0 %</td>
+                        <td>0 %</td>
+                        <td>0 %</td>
+                        <td>0 %</td>
+                        <td>0 %</td>
+                    </tr>
+                    <tr>
+                        <td class="title text--title"><span>Сумма кредита <br> от оценочной <br> стоимости</span></td>
+                        <td>60-80% </td>
+                        <td>50-60% </td>
+                        <td>75-85% </td>
+                        <td>до 30%</td>
+                        <td>50-70%USD</td>
+                    </tr>
+                    <tr>
+                        <td class="title text--title"><span>Валюта</span></td>
+                        <td>USD</td>
+                        <td>USD</td>
+                        <td>USD</td>
+                        <td>USD</td>
+                        <td>UAH</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_07">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h2 class="text--title">Как <br> мы <br> работаем</h2>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <p class="number text--title text--blue">01</p>
+                    <p class="text--title title">Подача <br> Заявки</p>
+                    <p class="text">Вы звоните или оставляете заявку. Мы перезвоним, ответим на ваши вопросы <br> и договоримся <br> о встрече</p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <p class="number text--title text--blue">02</p>
+                    <p class="text--title title">Выбор  <br> программы</p>
+                    <p class="text">Вместе со специалистом AFA вы <br> выберете подходящую  программу <br> утвердите сроки, условия и график платежей. </p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <p class="number text--title text--blue">03</p>
+                    <p class="text--title title">Оценка <br> объекта</p>
+                    <p class="text">Специалист <br> по недвижимости проведет <br> бесплатную оценку объекта. </p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <p class="number text--title text--blue">04</p>
+                    <p class="text--title title">Оформление <br> договора</p>
+                    <p class="text">У нотариуса вы оформите договора займа и залога, <br> и получите заемные средства.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_08">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="img/sec_08-img.png" alt="Оформление займов в AFA" class="sec_img">
+            </div>
+            <div class="col-6">
+                <h2 class="text--title">Чтобы <br> оформить займ</h2>
+                <div class="item">
+                    <p class="text--title title">Под залог недвижимости, вам понадобятся <br> такие документы: </p>
+                    <ul class="list_img">
+                       <li>Паспорт;</li>
+                       <li>Идентификационный код;</li>
+                       <li>Документы, которые подтверждают право собственности <br> на вашу недвижимость;</li>
+                       <li>Форма №3.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="lineblock">
+    <p class="text--title line_block--text">growth</p>
+    <img class="line" src="img/line.png" alt="График роста вашей прибыли с AFA">
+    <img class="line-2" src="img/line.png" alt="График роста вашей прибыли с AFA">
+</div>
+
+<div id="sec_09">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text--title">ПОЧЕМУ AFA <br> — ЭТО ВЫГОДНО</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <img src="img/line_vertical.png" alt="Разделитель" class="separator">
+            </div>
+            <div class="col-10">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>AFA</td>
+                        <td>Банки</td>
+                        <td>Кредитные <br> союзы</td>
+                        <td>Финансовые <br> компании <br> под залог</td>
+                        <td>Финансовые <br> компании <br> без залога</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text--title title">Процентные ставки</p>
+                            <p class="text">AFA предоставляет 5 программ финансирования с различными ставками от 2% в месяц с возможностью уменьшить платеж за счет погашения тела займа </p>
+                        </td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text--title title"></p>
+                            <p class="text">В AFA каждый клиент может получить до 80% от средней рыночной стоимости объекта залога. </p>
+                        </td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text--title title">Скорость выдачи</p>
+                            <p class="text">Вы получаете финансирование за  1-2 дня. Мы оперативно подберем программу, проведем оценку и оформим договора.</p>
+                        </td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text--title title">Валюта</p>
+                            <p class="text">Деньги можно получить как в гривне, так и в долларах США.</p>
+                        </td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text--title title">Справки и проверки</p>
+                            <p class="text">Нам не нужны справки о доходах, трудоустройстве, вменяемости, кредитной истории и прочие бумаги. Специалисты компании проверяют лишь залог на его наличие, аресты и прочие спорные вопросы.</p>
+                        </td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text--title title">Надежность</p>
+                            <p class="text">Репутация AFA — результат 6 лет упорной и качественной работы. Ее подтверждают десятки отзывов, обзоров, выступлений в СМИ, благодарностей. Мы работаем только с нотариально заверенными договорами и всегда описываем клиентам все детали сделки.</p>
+                        </td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>+</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_10">
+    <div class="contaienr">
+        <div class="row">
+            <div class="col-6">
+                <img src="img/sec_10-img.png" alt="Позвонить в AFA" class="sec_img">
+            </div>
+            <div class="col-6">
+                <h2 class="text--title">ОСТАЛИСЬ СОМНЕНИЯ?</h2>
+                <div class="item">
+                    <p class="text--title title">Хотите задать вопрос?</p>
+                    <p class="text">Жмите на кнопку — наш специалист <br> позвонит вам и ответит на все вопросы.</p>
+                    <a class="md-trigger btn flex" data-modal="modal_callback">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_11">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h2 class="text--title">AFA <br>В ЦИФРАХ</h2>
+                <img src="img/line_horizontal.png" alt="" class="separator">
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div class="p number text--title">600 +</div>
+                    <p class="text">Клиентов <br> уже погасили займ</p>
+                </div>
+                <div class="item">
+                    <div class="p number text--title">$ 2 670 000 +</div>
+                    <p class="text">Финансовый портфель</p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <div class="p number text--title">$ 10 500</div>
+                    <p class="text">Средняя сумма <br> кредита</p>
+                </div>
+                <div class="item">
+                    <div class="p number text--title">60 +</div>
+                    <p class="text">Частных <br> инвесторов</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="img/sec_11-img.png" alt="AFA в цифрах" class="sec_img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_12">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text--title">СОТРУДНИКИ AFA <br> <span class="text--blue">ПО РАБОТЕ <br> С КЛИЕНТАМИ</span></h2>
+                <img src="img/vertical_line_wt.png" alt="Разделитель" class="separator">
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <img src="img/empl-1.png" alt="Сотрудники AFA" class="empl_img">
+                    <p class="name text--title">Прус Юрий</p>
+                </div>
+                <div class="item">
+                    <img src="img/empl-4.png" alt="Сотрудники AFA" class="empl_img">
+                    <p class="name text--title">Эрастова Инга</p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <img src="img/empl-2.png" alt="Сотрудники AFA" class="empl_img">
+                    <p class="name text--title">Александр Ковальчук</p>
+                </div>
+                <div class="item">
+                    <img src="img/empl-5.png" alt="Сотрудники AFA" class="empl_img">
+                    <p class="name text--title">Наталья Коновал</p>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="item">
+                    <img src="img/empl-3.png" alt="Сотрудники AFA" class="empl_img">
+                    <p class="name text--title">Людмила Толстикова</p>
+                </div>
+                <div class="item">
+                    <img src="img/empl-6.png" alt="Сотрудники AFA" class="empl_img">
+                    <p class="name text--title">Герасименко Татьяна</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_13">
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <h2 class="text--title">О НАС ПИШУТ:  <br> ПРО AFA <br> В ПРЕССЕ</h2>
+                <img src="img/line_horizontal.png" alt="Разделитель" class="separator">
+            </div>
+            <div class="col-7">
+                <img src="img/logo-1.png" alt="Пресса об AFA">
+                <img src="img/logo-2.png" alt="Пресса об AFA">
+                <img src="img/logo-3.png" alt="Пресса об AFA">
+                <img src="img/logo-4.png" alt="Пресса об AFA">
+                <img src="img/logo-5.png" alt="Пресса об AFA">
+                <img src="img/logo-6.png" alt="Пресса об AFA">
+                <img src="img/logo-7.png" alt="Пресса об AFA">
+                <img src="img/logo-8.png" alt="Пресса об AFA">
+                <img src="img/logo-9.png" alt="Пресса об AFA">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="lineblock">
+    <p class="text--title line_block--text">growth</p>
+    <img class="line" src="img/line.png" alt="График роста вашей прибыли с AFA">
+    <img class="line-2" src="img/line.png" alt="График роста вашей прибыли с AFA">
+</div>
+
+<div id="sec_14">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <div class="slider_testimonials">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="slider_control">
+                    <div class="slide"><span>1</span>/3</div>
+                    <div class="slide"><span>2</span>/3</div>
+                    <div class="slide"><span>3</span>/3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_15">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text--title">Хотите <br> получить займ?</h2>
+                <div class="item">
+                    <p class="text--title">Заполните эту форму</p>
+                    <p class="text">— и специалист AFA свяжется <br> с вами через  20 минут.</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form_block">
+                    <form  method="POST" class="form-inline db-form" action="javascript:void(null);">
+
+                        <!-- Hidden DB Fields -->
+
+                        <input type="hidden" id="registrationType" name="registrationType" value="default_registration">
+                        <input type="hidden" id="orderType" name="orderType" value="Zayavka">
+                        <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
+                        <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
+                        <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
+                        <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
+                        <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
+                        <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
+                        <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
+                        <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
+                        <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
+                        <input type="hidden" name="city" value="">
+                        <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
+                        <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
+                        <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
+                        <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
+                        <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
+                        <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
+
+                        <!-- Zoho -->
+                        <!-- <input type="hidden" name="product_id" value="2167809000000656177">
+                        <input type="hidden" name="product_name" value="&laquo;BootCamp 2&raquo;"> -->
+                        <!-- Zoho -->
+
+                        <!-- END Hidden DB Fields -->
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="CompanyName">
+                        <input type="hidden" name="admin_email" value="alien_202@mail.ru">
+                        <input type="hidden" name="form_type" value="firstForm ">
+                        <!-- END Hidden Required Fields -->
+
+                        <span class="field">
+                            <input type="text" class="form-control" name="name" required=""  placeholder="Ваше имя " />
+                            <span class="bar"></span>
+                        </span>
+
+
+                        <span class="field">
+                            <input placeholder="Ваш телефон" type="tel" class="form-control" name="custom_tel" required="">
+                            <span class="bar"></span>
+                        </span>
+
+                        <span class="field">
+                            <input type="email" required="" placeholder="Ваш E-Mail" name="email" class="form-control">
+                            <span class="bar"></span>
+                        </span>
+
+
+                        <button type="submit" class="btn" name="send">ПОЛУЧИТЬ ЗАЙМ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sec_16">
+    <div class="map"></div>
+    <div class="contacts">
+        <h2 class="text--title">Контакты</h2>
+        <ul class="contacts">
+            <li><a href="">г. Киев, ул. Мечникова, 2 <br> БЦ “Парус”, 13 этаж</a></li>
+            <li><a href="tel:0443900280">(044) 390-02-80</a></li>
+            <li>С 10:00 до 18:00</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="col-12">
+            <img src="img/logo_btm.png" alt="Логотип AFA" class="logo">
+            <ul class="social">
+                <li><a target="_blank" href="https://vk.com/afa_kiev"><img src="img/vk.png" alt=""></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/AFACredit/"><img src="img/fb.png" alt=""></a></li>
+                <li><a target="_blank" href="https://twitter.com/AFA_Credit"><img src="img/twitter.png" alt=""></a></li>
+            </ul>
+            <a class="md-trigger text--title btn_call flex" data-modal="modal_callback"><span>мы перезвоним</span></a>
+        </div>
+    </div>
+</div>
 
 <footer>
     <div class="container">

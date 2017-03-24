@@ -1,11 +1,169 @@
 @import url(../libs/niftymodal/component.css);
 @import url(../libs/slick/slick.min.css);
-form {
-  width: 400px;
-  margin: 40px auto; }
-  form .field {
-    width: 100%;
-    margin: 5px 0; }
+.lineblock {
+  position: relative;
+  overflow: hidden;
+  height: 225px; }
+  .lineblock .line {
+    position: absolute;
+    top: 0;
+    float: right;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: line 200s infinite linear;
+    animation: line 200s infinite linear; }
+  .lineblock .line-2 {
+    position: absolute;
+    top: 50px;
+    float: right;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: line 100s infinite linear;
+    animation: line 100s infinite linear;
+    height: 60%; }
+  .lineblock .line_block--text {
+    text-align: center;
+    margin-top: -10px;
+    opacity: 0.03;
+    color: #373a3f;
+    font-size: 210px;
+    line-height: 200px;
+    text-transform: uppercase; }
+
+@-webkit-keyframes line {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  50% {
+    -webkit-transform: translateX(-1700px);
+    transform: translateX(-1700px); }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); } }
+
+@keyframes line {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  50% {
+    -webkit-transform: translateX(-1700px);
+    transform: translateX(-1700px); }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); } }
+
+#sec_02 {
+  padding: 200px 0 40px; }
+  #sec_02 h2 {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 10px; }
+    #sec_02 h2:before {
+      content: "";
+      position: absolute;
+      width: 195px;
+      height: 241px;
+      top: -40px;
+      left: 0;
+      background: url(../img/sec_02-geometry.png); }
+  #sec_02 .title {
+    margin-bottom: 20px; }
+  #sec_02 .text {
+    line-height: 26px; }
+
+#sec_03 {
+  padding: 40px 0; }
+  #sec_03 h2 {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    position: relative; }
+    #sec_03 h2:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 105px;
+      top: 40px;
+      right: 15px;
+      background: url(../img/sec_03-geometry.png); }
+  #sec_03 .title {
+    margin-bottom: 14px; }
+
+#sec_04 {
+  padding: 160px 0 120px; }
+  #sec_04 h2 {
+    margin-top: 40px;
+    margin-bottom: 43px;
+    position: relative; }
+    #sec_04 h2:before {
+      content: "";
+      position: absolute;
+      width: 425px;
+      height: 171px;
+      top: -43px;
+      left: 5px;
+      background: url(../img/sec_04-geometry.png); }
+  #sec_04 .title {
+    margin-bottom: 10px; }
+  #sec_04 .item + .item {
+    margin-top: 35px; }
+  #sec_04 .separator {
+    margin: 35px 0 0 10px; }
+
+#sec_05 {
+  height: 1096px;
+  background-color: #282b2e; }
+
+#sec_06 {
+  padding: 190px 0; }
+  #sec_06 h2 {
+    margin-bottom: 20px; }
+  #sec_06 .separator {
+    margin-bottom: 53px; }
+  #sec_06 table {
+    width: 940px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(../img/table-bg.png);
+    margin-right: 40px;
+    position: relative; }
+    #sec_06 table:before {
+      content: "";
+      position: absolute;
+      width: 1140px;
+      height: 3px;
+      top: 113px;
+      left: -100px;
+      background-color: #373a3f; }
+    #sec_06 table:after {
+      content: "";
+      position: absolute;
+      width: 1140px;
+      height: 3px;
+      bottom: 0;
+      left: -100px;
+      background-color: #373a3f; }
+    #sec_06 table td {
+      text-align: center;
+      width: 160px;
+      vertical-align: middle; }
+    #sec_06 table td:nth-child(1) {
+      text-align: left; }
+      #sec_06 table td:nth-child(1) span {
+        display: block;
+        margin-left: -60px; }
+    #sec_06 table tr:nth-child(1) td {
+      padding: 33px 0; }
+    #sec_06 table tr:nth-child(2) {
+      height: 156px; }
+    #sec_06 table tr:nth-child(3) {
+      height: 74px; }
+    #sec_06 table tr:nth-child(4) {
+      height: 126px; }
+    #sec_06 table tr:nth-child(5) {
+      height: 112px; }
 
 footer {
   padding: 15px 0 15px;
