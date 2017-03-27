@@ -11,7 +11,61 @@ h2 {
   color: #373a3f;
   font-size: 48px;
   line-height: 56px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2; }
+
+h2:before {
+  -webkit-animation: geometry 50s infinite linear;
+  animation: geometry 50s infinite linear;
+  z-index: -1;
+  background-repeat: no-repeat !important; }
+
+@-webkit-keyframes geometry {
+  0% {
+    -webkit-transform: translate(0px) scale(1);
+    transform: translate(0px) scale(1); }
+  10% {
+    -webkit-transform: translate(20px, 20px) scale(0.9);
+    transform: translate(20px, 20px) scale(0.9); }
+  20% {
+    -webkit-transform: translate(-10px, -10px) scale(0.8);
+    transform: translate(-10px, -10px) scale(0.8); }
+  40% {
+    -webkit-transform: translate(30px, 5px) scale(0.9);
+    transform: translate(30px, 5px) scale(0.9); }
+  60% {
+    -webkit-transform: translate(-5px, 20px) scale(0.8);
+    transform: translate(-5px, 20px) scale(0.8); }
+  80% {
+    -webkit-transform: translate(20px, -10px) scale(0.9);
+    transform: translate(20px, -10px) scale(0.9); }
+  100% {
+    -webkit-transform: translate(0px) scale(1);
+    transform: translate(0px) scale(1); } }
+
+@keyframes geometry {
+  0% {
+    -webkit-transform: translate(0px) scale(1);
+    transform: translate(0px) scale(1); }
+  10% {
+    -webkit-transform: translate(20px, 20px) scale(0.9);
+    transform: translate(20px, 20px) scale(0.9); }
+  20% {
+    -webkit-transform: translate(-10px, -10px) scale(0.8);
+    transform: translate(-10px, -10px) scale(0.8); }
+  40% {
+    -webkit-transform: translate(30px, 5px) scale(0.9);
+    transform: translate(30px, 5px) scale(0.9); }
+  60% {
+    -webkit-transform: translate(-5px, 20px) scale(0.8);
+    transform: translate(-5px, 20px) scale(0.8); }
+  80% {
+    -webkit-transform: translate(20px, -10px) scale(0.9);
+    transform: translate(20px, -10px) scale(0.9); }
+  100% {
+    -webkit-transform: translate(0px) scale(1);
+    transform: translate(0px) scale(1); } }
 
 .text--title {
   font-family: "Webnar-Bold", sans-serif; }
