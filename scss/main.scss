@@ -22,7 +22,6 @@
     float: right;
     transform-origin: left;
     animation: line 100s infinite linear;
-    height: 60%;
   }
   .line_block--text{
     text-align: center;
@@ -36,10 +35,6 @@
     text-transform: uppercase;
   }
 }
-
-
-
-
 
 @keyframes line {
   0%{
@@ -79,6 +74,13 @@
 
 #sec_03{
   padding: 40px 0;
+  .youtube{
+    width: 515px;
+    height: 340px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/video.png) !important;
+  }
   h2{
     margin-top: 40px;
     margin-bottom: 70px;
@@ -121,6 +123,7 @@
   height: 1096px;
   background-color: #282b2e;
   position: relative;
+  overflow: hidden;
   img{
     position: absolute;
     top: 0;
@@ -482,7 +485,7 @@
   padding: 40px 0;
   h2{
     margin-bottom: 10px;
-    margin-top: 145px;
+    margin-top: 105px;
     margin-right: 30px;
     display: inline-block;
     &:before{
@@ -538,6 +541,19 @@
         left: 65px;
       }
       .title{margin-bottom: 20px;}
+    }
+    .youtube{
+      width: 653px;
+      height: 430px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url(../img/testim-video.png);
+    }
+    .youtube_slide.slide{
+      width: 653px !important;
+      padding: 0;
+      background-color: #FFF;
     }
   }
 }
@@ -599,6 +615,10 @@
   }
   .contacts{
     margin: 140px 0 0 195px;
+  }
+  .contacts_list{
+    position: relative;
+    z-index: 10;
   }
   h2{
     margin-bottom: 47px;

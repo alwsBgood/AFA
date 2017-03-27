@@ -132,6 +132,7 @@ $(document).ready(function(){
     dots: false,
     arrows: false,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     asNavFor: '.slider_control'
   });
 });
@@ -198,22 +199,22 @@ $(window).scroll(function() {
 
 //YOUTUBE
 
-// $(function() {
-//   $(".youtube").each(function() {
-//     $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+$(function() {
+  $(".youtube").each(function() {
+    // $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
-//     $(this).append($('<div/>', {'class': 'play'}));
+    $(this).append($('<div/>', {'class': 'play'}));
 
-//     $(document).delegate('#'+this.id, 'click', function() {
-//       var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
-//       if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
+    $(document).delegate('#'+this.id, 'click', function() {
+      var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+      if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
 
-//       var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+      var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
 
-//       $(this).replaceWith(iframe);
-//     });
-//   });
-// });
+      $(this).replaceWith(iframe);
+    });
+  });
+});
 
 //  UP BUTTON
 
@@ -360,7 +361,6 @@ $('#sec_11').waypoint(
 );
 
 
-
 // ====== Google Maps =====
 
 function init() {
@@ -390,7 +390,41 @@ function init() {
 
   $(document).ready(init);
 
+// Menu
 
+$(document).ready(function() {
+    (function() {
+      var i, resize;
+
+      i = setInterval(function() {
+        return $("#nav .wrapper").toggleClass("cross");
+    }, 1500);
+
+      $("#nav .wrapper").click(function() {
+        clearInterval(i);
+        if($('#nav').hasClass('open')){
+            return $("#nav .wrapper").addClass("cross");
+        } else {
+            return $("#nav .wrapper").removeClass("cross");
+        }
+    });
+      $('.callback').click(function(){
+        clearInterval(i);
+        $("#nav .wrapper").addClass("cross");
+      });
+  }).call(this);
+
+    $('#menu').click(function(){
+        $('#nav').toggleClass('open');
+        $('body').toggleClass('unscroll');
+    });
+
+    $('#nav li a').click(function(){
+      $('#nav').removeClass('open');
+      $("#nav .wrapper").removeClass("cross");
+    })
+
+});
 
 
 // Perfect Pxel

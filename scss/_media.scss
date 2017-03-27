@@ -2,6 +2,199 @@
 @import "vars.scss";
 
 @media (min-width: 768px) and (max-width: 991px){
+  .lineblock{
+    .line_block--text{
+      font-size: 170px;
+    }
+  }
+  #sec_02{
+      padding-top: 150px;
+      .title{font-size: 18px;}
+      .text{
+        font-size: 16px;
+        br{
+          display: none
+        }
+      }
+  }
+  #sec_03{
+    .youtube{
+      width: 345px;
+      height: 230px;
+    }
+    h2{
+      font-size: 35px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+    .title{margin-bottom: 10px;}
+    .text{
+      font-size: 15px;
+      br{
+        display: none;
+      }
+    }
+  }
+  #sec_04{
+    overflow: hidden;
+    padding: 100px 0;
+    h2{margin-top: 0;}
+    .separator{display: none;}
+    .sec_img{
+      width: 480px;
+    }
+  }
+  #sec_06{
+    table{
+      width: 100%;
+      margin-left: 0;
+      background: #FAFAFB;
+      td{
+        border: 1px solid #efefef;
+        padding: 10px;
+      }
+      td:nth-child(1) span {
+        margin-left: 20px;
+          font-size: 18px;
+      }
+    }
+  }
+  #sec_06.animated{
+    table:before, table:after{
+      width: 100%;
+      left: 0;
+    }
+  }
+  #sec_07{
+    padding-top: 60px;
+    .col-4{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .col-2{width: 25%;}
+    h2{
+      font-size: 42px;
+      line-height: 48px;
+      text-align: center;
+      display: inline-block;
+      br{display:none;}
+      &:before{height: 150px;}
+    }
+    .separator{
+      display: block;
+      margin: 0 auto;
+    }
+    .title{font-size: 18px;}
+    .text{
+      font-size: 15px;
+      line-height: 22px;
+      br{
+        display: none;
+      }
+    }
+  }
+  #sec_08{
+    .sec_img{width: 100%;}
+    h2:after{display: none;}
+  }
+  #sec_09{
+    .col-2{display:none;}
+    .col-10{width: 100%}
+    table{margin-top: 40px;}
+  }
+  #sec_10{
+    .sec_img{width: 100%}
+    h2:after{display: none;}
+  }
+  #sec_11{
+    padding-bottom: 130px;
+    .col-3{display: none;}
+    .col-2{width: 33.333%; margin: 0;}
+    h2{
+      margin-top: 40px;
+      font-size: 44px;
+      span{font-size: 52px;}
+    }
+    .sec_img{
+      width: 100%;
+      margin-top: 20px;
+    }
+    .text{
+      br{display: none}
+    }
+    .item{
+      min-height: 105px;
+    }
+  }
+  #sec_12{
+    padding: 110px 0 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/team-afa.png);
+    background-size: contain;
+    .empl_img{
+      width: 100%;
+    }
+    .item{
+      min-height: 160px;
+    }
+    h2{margin-top: 70px;}
+    .separator{display: none}
+  }
+  #sec_13{
+    padding-top: 150px;
+    h2{
+      margin-top: 50px;
+    }
+    .img_wrap{
+      text-align: center;
+    }
+  }
+  #sec_14{
+    h2:after{display: none}
+    h2{
+      margin-right: 0;
+      text-align: left;
+    }
+    .title{
+      margin-right: 0;
+      text-align: left;
+      font-size: 18px;
+    }
+    .slider_testimonials {
+      .slide{
+        padding: 60px 50px 60px 70px;
+        .testim_img{
+          position: static;
+          margin-bottom: 20px;
+        }
+      }
+      .youtube_slide.slide{
+        width: 408px !important;
+        padding-top: 100px;
+        .youtube{
+          width: 408px;
+          height: 360px;
+        }
+      }
+    }
+  }
+  #sec_15{
+    padding-top: 90px;
+    .form_block{
+      padding: 60px 50px;
+    }
+    .item:after{display: none}
+  }
+  #sec_16{
+    .contacts{
+      margin-left: 50px
+    }
+    h2:after{display: none}
+    .col-6{overflow: hidden}
+  }
+  [id*='sec_']{overflow: hidden;}
   footer{
     .politics a{
       font-size: 13px;
@@ -10,14 +203,311 @@
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
-
+  #sec_02{
+      padding-top: 150px;
+  }
+  #sec_03{
+    .youtube{
+      width: 455px;
+      height: 300px;
+    }
+    h2{
+      font-size: 46px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+  }
+  #sec_04{
+    overflow: hidden;
+    padding: 140px 0;
+  }
+  #sec_06{
+    table{
+      width: 100%;
+      margin-left: 0;
+      td:nth-child(1) span {
+          margin-left: 20px;
+          font-size: 18px;
+      }
+    }
+  }
+  #sec_06.animated{
+    table:before, table:after{
+      width: 100%;
+      left: 0;
+    }
+  }
+  #sec_11{
+    .number{
+      font-size: 22px;
+    }
+    .sec_img{
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  #sec_12{
+    padding: 150px 0 110px;
+    .empl_img{
+      width: 100%;
+    }
+    .item{
+      min-height: 192px;
+    }
+  }
+  #sec_13{
+    padding-top: 150px;
+    h2{margin-top: 50px;}
+    .img_wrap{
+      text-align: center;
+    }
+  }
+  #sec_14{
+    h2:after{display: none}
+    .slider_testimonials {
+      .slide{
+        padding-left: 160px;
+        padding-right: 80px;
+        .testim_img{
+          left: 35px;
+        }
+      }
+      .youtube_slide.slide{
+        width: 536px !important;
+        padding-top: 50px;
+        .youtube{
+          width: 536px;
+          height: 390px;
+        }
+      }
+    }
+  }
+  #sec_15{
+    padding-bottom: 120px;
+    .form_block{
+      padding: 70px;
+    }
+  }
+  #sec_16{
+    .contacts{
+      margin-left: 120px
+    }
+  }
+  [id*='sec_']{overflow: hidden;}
 }
 
-@media screen and (max-height: 760px){
+@media screen and (max-height: 850px){
   .md_large .md_content {max-height: 320px;}
 }
 
 @media (max-width: 767px) {
+  .lineblock{
+    .line_block--text{
+      font-size: 170px;
+    }
+  }
+  #sec_02{
+      padding-top: 100px;
+      h2{
+        br{display: none}
+        &:before{
+          height: 100px;
+        }
+      }
+      .separator{margin-bottom: 0px;}
+      .title{font-size: 18px;}
+      .text{
+        font-size: 16px;
+        br{
+          display: none
+        }
+      }
+      .col-3+.col-3{margin-top: 55px;}
+  }
+  #sec_03{
+    text-align: center;
+    h2{
+      margin-top: 40px;
+      display: inline-block;
+      &:before{
+        left: 50px
+      }
+    }
+    .youtube{
+      width: 345px;
+      height: 230px;
+      margin: 0 auto;
+    }
+    .title{margin-bottom: 10px;}
+    .text{
+      font-size: 15px;
+      br{
+        display: none;
+      }
+    }
+  }
+  #sec_04{
+    overflow: hidden;
+    padding: 100px 0;
+    h2{margin-top: 0;}
+    .separator{display: none;}
+    .sec_img{
+      width: 100%;
+      max-width: 500px;
+      margin-top: 50px;
+    }
+  }
+  #sec_06{
+    table{
+      width: 100%;
+      margin-left: 0;
+      background: #FAFAFB;
+      td{
+        border: 1px solid #efefef;
+        padding: 10px;
+      }
+      td:nth-child(1) span {
+        margin-left: 20px;
+          font-size: 18px;
+      }
+    }
+  }
+  #sec_06.animated{
+    table:before, table:after{
+      width: 100%;
+      left: 0;
+    }
+  }
+  #sec_07{
+    padding-top: 60px;
+    .col-4{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .col-2{width: 25%;}
+    h2{
+      font-size: 42px;
+      line-height: 48px;
+      text-align: center;
+      display: inline-block;
+      br{display:none;}
+      &:before{height: 150px;}
+    }
+    .separator{
+      display: block;
+      margin: 0 auto;
+    }
+    .title{font-size: 18px;}
+    .text{
+      font-size: 15px;
+      line-height: 22px;
+      br{
+        display: none;
+      }
+    }
+  }
+  #sec_08{
+    .sec_img{width: 100%;}
+    h2:after{display: none;}
+  }
+  #sec_09{
+    .col-2{display:none;}
+    .col-10{width: 100%}
+    table{margin-top: 40px;}
+  }
+  #sec_10{
+    .sec_img{width: 100%}
+    h2:after{display: none;}
+  }
+  #sec_11{
+    padding-bottom: 130px;
+    .col-3{display: none;}
+    .col-2{width: 33.333%; margin: 0;}
+    h2{
+      margin-top: 40px;
+      font-size: 44px;
+      span{font-size: 52px;}
+    }
+    .sec_img{
+      width: 100%;
+      margin-top: 20px;
+    }
+    .text{
+      br{display: none}
+    }
+    .item{
+      min-height: 105px;
+    }
+  }
+  #sec_12{
+    padding: 110px 0 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/team-afa.png);
+    background-size: contain;
+    .empl_img{
+      width: 100%;
+    }
+    .item{
+      min-height: 160px;
+    }
+    h2{margin-top: 70px;}
+    .separator{display: none}
+  }
+  #sec_13{
+    padding-top: 150px;
+    h2{
+      margin-top: 50px;
+    }
+    .img_wrap{
+      text-align: center;
+    }
+  }
+  #sec_14{
+    h2:after{display: none}
+    h2{
+      margin-right: 0;
+      text-align: left;
+    }
+    .title{
+      margin-right: 0;
+      text-align: left;
+      font-size: 18px;
+    }
+    .slider_testimonials {
+      .slide{
+        padding: 60px 50px 60px 70px;
+        .testim_img{
+          position: static;
+          margin-bottom: 20px;
+        }
+      }
+      .youtube_slide.slide{
+        width: 408px !important;
+        padding-top: 100px;
+        .youtube{
+          width: 408px;
+          height: 360px;
+        }
+      }
+    }
+  }
+  #sec_15{
+    padding-top: 90px;
+    .form_block{
+      padding: 60px 50px;
+    }
+    .item:after{display: none}
+  }
+  #sec_16{
+    .contacts{
+      margin-left: 50px
+    }
+    h2:after{display: none}
+    .col-6{overflow: hidden}
+  }
+  [id*='sec_']{overflow: hidden;}
   footer{
     text-align: center;
     .politics{
