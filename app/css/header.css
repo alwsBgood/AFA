@@ -414,3 +414,9 @@ path#middle {
       margin: 0 auto 40px; }
     #sec_01 .btn {
       margin: 0 auto; } }
+
+@media (max-width: 767px) {
+  #sec_01 h1 {
+    font-size: 30px; }
+  #sec_01 .afterheader {
+    width: 90%; } }

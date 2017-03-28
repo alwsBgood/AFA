@@ -421,6 +421,7 @@ $(document).ready(function() {
 
     $('#nav li a').click(function(){
       $('#nav').removeClass('open');
+      $('body').removeClass('unscroll');
       $("#nav .wrapper").removeClass("cross");
     })
 

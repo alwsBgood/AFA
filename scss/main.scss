@@ -80,6 +80,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../img/video.png) !important;
+    transition: all .4s;
+    &:hover{box-shadow: 0 0 20px $main_color;}
   }
   h2{
     margin-top: 40px;
@@ -392,6 +394,10 @@
       background-color: #373a3f;
     }
   }
+  .item{
+    position: relative;
+    z-index: 10;
+  }
   .text{margin: 10px 0 30px;}
 }
 
@@ -559,6 +565,7 @@
 }
 
 #sec_15{
+  .mobile{display: none;}
   padding: 155px 0 200px;
   h2{
     margin-bottom: 35px;

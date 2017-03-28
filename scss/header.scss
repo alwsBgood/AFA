@@ -471,3 +471,14 @@ path#middle {
     .btn{margin: 0 auto;}
   }
 }
+
+@media (max-width: 767px) {
+  #sec_01{
+    h1{
+      font-size: 30px;
+    }
+    .afterheader{
+        width: 90%;
+    }
+  }
+}

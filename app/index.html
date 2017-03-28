@@ -81,10 +81,10 @@
 
                 <ul>
                    <li><a href="#sec_02" class="scroll">Что такое P2p</a></li>
-                   <li><a href="#sec_07" class="scroll">Как это работает</a></li>
-                   <li><a href="#sec_09" class="scroll">Почему AFA</a></li>
-                   <li><a href="#sec_14" class="scroll">Отзывы</a></li>
                    <li><a href="#sec_05" class="scroll">Калькулятор</a></li>
+                   <li><a href="#sec_06" class="scroll">КРЕДИТНЫЕ ПРОГРАММЫ</a></li>
+                   <li><a href="#sec_07" class="scroll">Как это работает</a></li>
+                   <li><a href="#sec_14" class="scroll">Отзывы</a></li>
                 </ul>
                 <div class="contacts">
                     <span class="contacts_title text--title">Свяжитесь с нами:</span>
@@ -205,9 +205,76 @@
 </div>
 
 <div id="sec_05">
-    <a class="md-trigger" data-modal="modal_callback_2">
-        <img src="img/placeholder_calc.png" alt="Калькулятор" title="В разработке">
-    </a>
+    <div class="grey"></div>
+    <div class="container">
+        <div class="col-12">
+            <h2 class="text--title">КАЛЬКУЛЯТОР</h2>
+            <div class="tc"><img src="img/sep_blue.png" alt="" class="separator"></div>
+        </div>
+        <div class="col-12">
+            <form  method="POST" class="form-inline db-form" action="javascript:void(null);">
+
+                <!-- Hidden DB Fields -->
+
+                <input type="hidden" name="orderType" value="Calculator">
+                <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
+                <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
+                <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
+                <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
+                <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
+                <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
+                <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
+                <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
+                <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
+                <input type="hidden" name="city" value="">
+                <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
+                <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
+                <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
+                <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
+                <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
+                <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
+
+                <!-- END Hidden DB Fields -->
+
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="AFA">
+                <input type="hidden" name="admin_email" value="alien_202@mail.ru">
+                <input type="hidden" name="form_type" value="firstForm ">
+                <!-- END Hidden Required Fields -->
+
+                <div class="left_part">
+                    <div class="slider_sum"></div>
+                    <div class="slider_month"></div>
+                </div>
+
+                <div class="right_part">
+                    <span class="input field">
+                        <input id="name_01" required="" class="form-control name input__field " type="text" name="name" />
+                        <label class="input__label" for="name_01">
+                            <span class="input__label-content">имя</span>
+                        </label>
+                    </span>
+
+                    <span class="input field">
+                        <input id="tel_01" required="" class="form-control name input__field" type="tel" name="phone"/>
+                        <label class="input__label" for="tel_01">
+                            <span class="input__label-content">телефон</span>
+                        </label>
+                    </span>
+
+                    <span class="input field">
+                        <input id="mail_01" required="" class="form-control name input__field" type="email" name="email" />
+                        <label class="input__label" for="mail_01">
+                            <span class="input__label-content">e-mail</span>
+                        </label>
+                    </span>
+                </div>
+
+
+                <button type="submit" class="btn" name="send">ПОЛУЧИТЬ ЗАЙМ</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <div id="sec_06">
@@ -220,48 +287,50 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <table>
-                    <tr class="text--title">
-                        <td></td>
-                        <td>В долларах <br> США</td>
-                        <td>Особые <br> условия</td>
-                        <td>Максимальная</td>
-                        <td>Авансовый <br> платеж</td>
-                        <td>В гривне</td>
-                    </tr>
-                    <tr>
-                        <td class="title text--title"><span>Процентная  <br> ставка по займу  <br> / месяц</span></td>
-                        <td>2,5 % <br> (30% год.)</td>
-                        <td>От 2,2% <br> до 3 % <br> (26% год.)</td>
-                        <td>2,9% <br> (34,8% год.)</td>
-                        <td>От 2 до 3% <br> (24% год.)</td>
-                        <td>От 2 до 3% <br> (24% год.)</td>
-                    </tr>
-                    <tr>
-                        <td class="title text--title"><span>Комиссия</span></td>
-                        <td>0 %</td>
-                        <td>0 %</td>
-                        <td>0 %</td>
-                        <td>0 %</td>
-                        <td>0 %</td>
-                    </tr>
-                    <tr>
-                        <td class="title text--title"><span>Сумма кредита <br> от оценочной <br> стоимости</span></td>
-                        <td>60-80% </td>
-                        <td>50-60% </td>
-                        <td>75-85% </td>
-                        <td>до 30%</td>
-                        <td>50-70%USD</td>
-                    </tr>
-                    <tr>
-                        <td class="title text--title"><span>Валюта</span></td>
-                        <td>USD</td>
-                        <td>USD</td>
-                        <td>USD</td>
-                        <td>USD</td>
-                        <td>UAH</td>
-                    </tr>
-                </table>
+                <div class="table_wrap">
+                    <table>
+                        <tr class="text--title">
+                            <td></td>
+                            <td>В долларах <br> США</td>
+                            <td>Особые <br> условия</td>
+                            <td>Максимальная</td>
+                            <td>Авансовый <br> платеж</td>
+                            <td>В гривне</td>
+                        </tr>
+                        <tr>
+                            <td class="title text--title"><span>Процентная  <br> ставка по займу  <br> / месяц</span></td>
+                            <td>2,5 % <br> (30% год.)</td>
+                            <td>От 2,2% <br> до 3 % <br> (26% год.)</td>
+                            <td>2,9% <br> (34,8% год.)</td>
+                            <td>От 2 до 3% <br> (24% год.)</td>
+                            <td>От 2 до 3% <br> (24% год.)</td>
+                        </tr>
+                        <tr>
+                            <td class="title text--title"><span>Комиссия</span></td>
+                            <td>0 %</td>
+                            <td>0 %</td>
+                            <td>0 %</td>
+                            <td>0 %</td>
+                            <td>0 %</td>
+                        </tr>
+                        <tr>
+                            <td class="title text--title"><span>Сумма кредита <br> от оценочной <br> стоимости</span></td>
+                            <td>60-80% </td>
+                            <td>50-60% </td>
+                            <td>75-85% </td>
+                            <td>до 30%</td>
+                            <td>50-70%USD</td>
+                        </tr>
+                        <tr>
+                            <td class="title text--title"><span>Валюта</span></td>
+                            <td>USD</td>
+                            <td>USD</td>
+                            <td>USD</td>
+                            <td>USD</td>
+                            <td>UAH</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -448,7 +517,7 @@
 <div id="sec_11">
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 header_block">
                 <h2 class="text--title"><span>AFA</span> <br>В ЦИФРАХ</h2>
                 <img src="img/line_horizontal.png" alt="" class="separator">
             </div>
@@ -571,6 +640,17 @@
 <div id="sec_14">
     <div class="container">
         <div class="row">
+            <div class="col-5 tc mobile">
+            <h2 class="text--title">ЧТО ГОВОРЯТ</h2>
+            <p class="text--title title">Те, кто уже оформил кредит в AFA</p>
+                <div class="slider_control">
+                    <div class="slide"><p><span>1</span> / 5</p></div>
+                    <div class="slide"><p><span>2</span> / 5</p></div>
+                    <div class="slide"><p><span>3</span> / 5</p></div>
+                    <div class="slide"><p><span>4</span> / 5</p></div>
+                    <div class="slide"><p><span>5</span> / 5</p></div>
+                </div>
+            </div>
             <div class="col-7">
                 <div class="slider_testimonials">
 
@@ -600,7 +680,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5 tr">
+            <div class="col-5 tr desctop">
             <h2 class="text--title">ЧТО ГОВОРЯТ</h2>
             <p class="text--title title">Те, кто уже оформил кредит в AFA</p>
                 <div class="slider_control">
