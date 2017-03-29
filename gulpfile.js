@@ -46,7 +46,8 @@ gulp.task('scripts', function() {
 		'./app/libs/plugins-scroll/plugins-scroll.js',
     './app/libs/slick/slick.min.js',
     './app/libs/animateNumber/animateNumber.js',
-    './app/libs/waypoints/waypoints.min.js'
+    './app/libs/waypoints/waypoints.min.js',
+    './app/libs/noUiSlider.9.2.0/nouislider.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(gulp.dest('./app/js/'));

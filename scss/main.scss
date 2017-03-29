@@ -101,7 +101,7 @@
 }
 
 #sec_04{
-  padding: 160px 0 120px;
+  padding: 160px 0 130px;
   h2{
     margin-top: 40px;
     margin-bottom: 43px;
@@ -122,22 +122,187 @@
 }
 
 #sec_05{
-  height: 1096px;
-  background-color: #282b2e;
+  padding: 135px 0;
+  background-image: url(../img/sec_05-bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
-  img{
+  background-color: #f6f6f7;
+  .grey{
     position: absolute;
+    left: 0;
     top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #282b2e;
+  }
+  .col-12{
+    position: relative;
+    z-index: 10;
+  }
+  h2{
+    color: #fff;
+  }
+  .tc{
+    margin-top: -35px;
+    margin-bottom: 70px;
+  }
+  form{
+    position: relative;
+    padding-bottom: 100px;
+    .title{
+      margin-bottom: 20px;
+    }
+    .text{
+      margin-bottom: 10px;
+    }
+    .md-trigger{
+      display: inline-block;
+      color: #000;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #000;
+      letter-spacing: .3em;
+      font-family: $title_font;
+      padding-bottom: 3px;
+      margin-bottom: 100px;
+    }
+    .field{
+      max-width: 360px;
+    }
+    .field+.field{
+      margin-top: 28px;
+    }
+  }
+  .btn{
+    position: absolute;
+    width: 220px;
     left: 50%;
-    margin-left: -960px;
+    margin-left: -110px;
+    bottom: 0;
+  }
+  .left_part{
+    float: left;
+    width: 100%;
+    max-width: 460px;
+  }
+  .right_part{
+    float: right;
+    width: 100%;
+    max-width: 460px;
+  }
+  .value_label{
+    color: #8b8b8b;
+    font-family: $title_font;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .slider_description{
+    margin-bottom: 30px;
+    .value_label{
+      float: left;
+    }
+    .slider_value{
+      float: right;
+      color: #4d81ee;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  .slider_field+.slider_field{
+    margin-top: 85px;
+  }
+  .repayment_type{
+    margin-top: 75px;
+    margin-bottom: 35px;
+    .value_label{margin-bottom: 10px;}
+    .radio_field{
+      display: inline-block;
+      input{display: none;}
+      .radio_label{
+        cursor: pointer;
+        padding: 9px 31px;
+        font-size: 14px;
+        line-height: 16px;
+        float: left;
+        transition: all .4s;
+      }
+      input.checked + .radio_label{
+        background: $main_color;
+        color: #fff;
+      }
+    }
+  }
+  .currency_type{
+    display: inline-block;
+    .value_label{margin-bottom: 10px;}
+    .radio_field{
+      display: inline-block;
+      input{display: none;}
+      .radio_label{
+        cursor: pointer;
+        padding: 9px 10px;
+        font-size: 14px;
+        line-height: 16px;
+        float: left;
+        transition: all .4s;
+      }
+      input.checked + .radio_label{
+        background: $main_color;
+        color: #fff;
+      }
+    }
+    .radio_field+.radio_field{margin-left:-2px;}
+  }
+
+  .pledge_type_wrap{
+    .value_label{margin-bottom: 10px;}
+    float: right;
+    select{
+      background: none;
+      font-size: 14px;
+      outline: none;
+      width: 265px;
+      padding: 10px 0;
+      color: $main_color;
+      border: none;
+      border-bottom: 1px solid $main_color;
+    }
+  }
+
+  .total_row{
+    margin-top: 50px;
+    position: relative;
+    padding-left: 80px;
+    .total_text{
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+    .total_values{
+      width: 150px;
+      display: inline-block;
+    }
+    .total_value{
+      display: inline-block;
+      vertical-align: top;
+      float: right;
+      color: #ffffff;
+      font-family: $title_font;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .repayment_type_block{
+    float: right;
+    text-align: right;
+    vertical-align: top;
+    .payments_value{
+      color: #fff;
+    }
   }
 }
-
-#modal_callback_2{
-  .title{margin-bottom: 40px;}
-}
-
 
 
 
@@ -893,4 +1058,5 @@ input:invalid{
 @import "_media.scss";
 @import "../libs/niftymodal/component.css";
 @import "../libs/slick/slick.min.css";
+@import "../libs/noUiSlider.9.2.0/nouislider.css";
 // @import "../fonts/font-awesome/font-awesome.min.css"

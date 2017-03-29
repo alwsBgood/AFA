@@ -44,6 +44,43 @@
       width: 480px;
     }
   }
+  #sec_05{
+    h2{
+      text-align: center;
+    }
+    .tc{
+      margin: 20px 0 40px;
+    }
+    .grey{
+      width: 100%;
+    }
+    .left_part, .right_part{
+      max-width: 600px;
+      float: none;
+      margin: 0 auto;
+    }
+    .right_part{
+      color: #fff;
+      margin-top: 80px;
+    }
+    form{
+      .title{
+        color: #fff;
+      }
+      .field {
+        max-width: 100%;
+        input{
+          color: #fff;
+        }
+      }
+      .md-trigger{
+        color: #fff;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
   #sec_06{
     table{
       width: 100%;
@@ -221,6 +258,27 @@
     overflow: hidden;
     padding: 140px 0;
   }
+  #sec_05{
+    .left_part, .right_part{
+      max-width: 400px;
+    }
+  }
+  #sec_05{
+    .left_part, .right_part{
+      max-width: 400px;
+    }
+    .total_row{
+      .total_text{
+        position: static;
+        margin-bottom: 10px;
+      }
+      padding-left: 0;
+    }
+    .repayment_type_block{
+      text-align: left;
+    }
+    .repayment_type .radio_field .radio_label {padding: 9px 20px;}
+  }
   #sec_06{
     table{
       width: 100%;
@@ -360,6 +418,45 @@
       max-width: 500px;
       margin-top: 50px;
     }
+  }
+  #sec_05{
+    padding: 90px 10px;
+    h2{
+      text-align: center;
+    }
+    .tc{
+      margin: 20px 0 40px;
+    }
+    .grey{
+      width: 100%;
+    }
+    .left_part, .right_part{
+      max-width: 600px;
+      float: none;
+      margin: 0 auto;
+    }
+    .right_part{
+      color: #fff;
+      margin-top: 80px;
+    }
+    form{
+      .title{
+        color: #fff;
+      }
+      .field {
+        max-width: 100%;
+        input{
+          color: #fff;
+        }
+      }
+      .md-trigger{
+        color: #fff;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+
   }
   #sec_06{
     padding: 130px 0 100px;
@@ -606,6 +703,38 @@
     h2{padding-top: 70px;}
     .btn_close_modal{
       top: 20px;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  div[id*="modal_callback"]{
+    max-width: 500px;
+    min-width: 100%;
+  }
+  #sec_05{
+    .left_part, .right_part{
+      max-width: 400px;
+    }
+    .total_row{
+      .total_text{
+        position: static;
+        margin-bottom: 10px;
+      }
+      padding-left: 0;
+    }
+    .pledge_type_wrap{
+      margin-top: 20px;
+    }
+    .repayment_type_block{
+      margin-top: 20px;
+      text-align: left;
+      float: none;
+    }
+    .repayment_type .radio_field {
+      display: block;
+      height: 50px;
     }
   }
 }

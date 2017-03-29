@@ -427,48 +427,131 @@ $(document).ready(function() {
 
 });
 
+// Calculator
 
-// Perfect Pxel
+var slider_sum = document.getElementById('slider_sum');
 
-// $('body').each(function() {
-//   var body = $(this);
-//   var img_url = $(this).data('img');
-//   var img = new Image();
-//   img.src = img_url;
-//   img.onload = function(){
-//     var ppbox = '<div id="pp" style="background: url('+img_url+') no-repeat 50% 0%;top:0;width:100%;position:absolute;z-index:1000000;opacity:0.5;height:'+img.height+'px"></div>';
-//     var ppbtn = '<button onclick="myOff()" id="ppbtn" style="position:fixed;top:0;right:0;z-index:1000001">ON</button>'
-//     body.append(ppbox);
-//     body.append(ppbtn);
-//   };
-// });
-// function myOff() {
-//   var ppbtntext = $('#ppbtn').text();
-//   if (ppbtntext == 'ON') {
-//     $('#ppbtn').text('OFF');
-//     $('#pp').css('display', 'none');
-//   } else {
-//     $('#ppbtn').text('ON');
-//     $('#pp')        .css({
-//       ' z-index' : '1000000',
-//       display: 'block'
-//     });
+noUiSlider.create(slider_sum, {
+ start: [10000],
+ connect: true,
+ step: 1000,
+ connect: [true, false],
+ range: {
+   'min': 10000,
+   '17%' : [100000,  10000],
+   '33%' : [200000,  10000],
+   '50%' : [300000,  10000],
+   '66%' : [400000,  10000],
+   '83%' : [500000,  10000],
+   'max': 600000
+ },
+ pips: {
+    mode: 'range',
+    stepped: true,
+    density: 2
+  },
+  format: wNumb({
+    decimals: 0,
+  })
+});
 
-//   }
-// }
+var sliderSumValueElement = document.getElementById('slider_sum-value');
 
-// $('html').keydown(function(){
-//   var ppbtntext = $('#ppbtn').text();
-//   if (event.keyCode == 81) {
-//     if (ppbtntext == 'ON') {
-//       $('#ppbtn').text('OFF');
-//       $('#pp').css('display', 'none');
-//     } else {
-//       $('#ppbtn').text('ON');
-//       $('#pp')        .css({
-//         ' z-index' : '1000000',
-//         display: 'block'
-//       });
-//     }
-//   }
-// });
+slider_sum.noUiSlider.on('update', function( values, handle ) {
+  var fixedValues = Number(values[handle]).toFixed();
+  sliderSumValueElement.innerHTML =  '$ ' + fixedValues;
+});
+
+
+var slider_month = document.getElementById('slider_month');
+noUiSlider.create(slider_month, {
+  start: [1],
+  connect: true,
+  step: 1,
+  connect: [true, false],
+  range: {
+   'min': 1,
+   '19%' : [6,  1],
+   '40%' : [12,  1],
+   '60%' : [18,  1],
+   '80%' : [24,  1],
+   'max': 30
+  },
+  pips: {
+    mode: 'range',
+    stepped: true,
+    density: 3.5
+  },
+  format: wNumb({
+    decimals: 0,
+  })
+});
+
+
+var sliderMonthValueElement = document.getElementById('slider_month-value');
+
+slider_month.noUiSlider.on('update', function( values, handle ) {
+  var fixedValues = Number(values[handle]).toFixed();
+  sliderMonthValueElement.innerHTML = fixedValues + ' мес.';
+});
+
+// Обработчик выбора типа кредита
+
+$('.input_type').click(function(event) {
+  $('.input_type').removeClass('checked');
+  $(this).addClass('checked');
+  slider_month.noUiSlider.reset();
+  slider_sum.noUiSlider.reset();
+});
+
+
+$('.input_currency').click(function(event) {
+  $('.input_currency').removeClass('checked');
+  $(this).addClass('checked');
+  slider_month.noUiSlider.reset();
+  slider_sum.noUiSlider.reset();
+});
+
+// Поля для ввода значений
+
+var totalSum = document.getElementById('total_sum');
+var totalMonth = document.getElementById('total_month');
+var repaymentTypeValue = document.getElementById('repayment_type_value');
+
+
+// Обработчик слайдера суммы
+
+slider_sum.noUiSlider.on('update', function(  values, handle ) {
+  var sliderSumValue = +Number(slider_sum.noUiSlider.get()).toFixed();
+  var sliderMonthValue = +Number(slider_month.noUiSlider.get()).toFixed();
+
+  if($('#usd').hasClass('checked')){
+    totalMonth.innerHTML = sliderMonthValue + ' мес.';
+    if ($('#only_percents').hasClass('checked')){
+      totalSum.innerHTML = '$ ' + (sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue));
+      repaymentTypeValue.innerHTML = '$ ' + sliderSumValue * 0.02
+      + '<div> <p class="value_label repayment_type_label">Последний платеж : </p> <p class="payments_value">$ ' + sliderSumValue + '</p> </div>';
+    } else if ($('#equal_parts').hasClass('checked')){
+        totalSum.innerHTML = '$ ' + (sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue));
+        repaymentTypeValue.innerHTML = '$ ' + (((sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue)).toFixed()/sliderMonthValue).toFixed());
+    }
+  }
+});
+
+// Обработчик слайдера месяца
+
+slider_month.noUiSlider.on('update', function( values, handle ) {
+  var sliderSumValue = +Number(slider_sum.noUiSlider.get()).toFixed();
+  var sliderMonthValue = +Number(slider_month.noUiSlider.get()).toFixed();
+
+  if($('#usd').hasClass('checked')){
+    totalMonth.innerHTML = sliderMonthValue + ' мес.';
+
+    if ($('#only_percents').hasClass('checked')){
+      totalSum.innerHTML = '$ ' + (sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue));
+    } else if ($('#equal_parts').hasClass('checked')){
+        totalSum.innerHTML = '$ ' + (sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue));
+        repaymentTypeValue.innerHTML = '$ ' + (((sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue)).toFixed()/sliderMonthValue).toFixed());
+    }
+  }
+});

@@ -207,72 +207,163 @@
 <div id="sec_05">
     <div class="grey"></div>
     <div class="container">
-        <div class="col-12">
-            <h2 class="text--title">КАЛЬКУЛЯТОР</h2>
-            <div class="tc"><img src="img/sep_blue.png" alt="" class="separator"></div>
-        </div>
-        <div class="col-12">
-            <form  method="POST" class="form-inline db-form" action="javascript:void(null);">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text--title">КАЛЬКУЛЯТОР</h2>
+                <div class="tc"><img src="img/sep_blue.png" alt="" class="separator"></div>
+            </div>
+            <div class="col-12">
+                <form  method="POST" class="form-inline clearfix db-form" action="javascript:void(null);">
 
-                <!-- Hidden DB Fields -->
+                    <!-- Hidden DB Fields -->
 
-                <input type="hidden" name="orderType" value="Calculator">
-                <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
-                <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
-                <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
-                <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
-                <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
-                <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
-                <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
-                <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
-                <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
-                <input type="hidden" name="city" value="">
-                <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
-                <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
-                <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
-                <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
-                <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
-                <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
+                    <input type="hidden" name="orderType" value="Calculator">
+                    <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
+                    <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
+                    <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
+                    <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
+                    <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
+                    <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
+                    <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
+                    <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
+                    <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
+                    <input type="hidden" name="city" value="">
+                    <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
+                    <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
+                    <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
+                    <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
+                    <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
+                    <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
 
-                <!-- END Hidden DB Fields -->
+                    <!-- END Hidden DB Fields -->
 
-                <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="AFA">
-                <input type="hidden" name="admin_email" value="alien_202@mail.ru">
-                <input type="hidden" name="form_type" value="firstForm ">
-                <!-- END Hidden Required Fields -->
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="AFA">
+                    <input type="hidden" name="admin_email" value="alien_202@mail.ru">
+                    <input type="hidden" name="form_type" value="firstForm ">
+                    <!-- END Hidden Required Fields -->
 
-                <div class="left_part">
-                    <div class="slider_sum"></div>
-                    <div class="slider_month"></div>
-                </div>
+                    <div class="left_part">
+                        <!--  Slider sum -->
+                        <div class="slider_field form_row">
+                            <div class="slider_description clearfix slider_sum-desc">
+                                <p class="value_label">Сумма:</p>
+                                <div class="slider_value" id="slider_sum-value"></div>
+                            </div>
+                            <div id="slider_sum"></div>
+                        </div>
 
-                <div class="right_part">
-                    <span class="input field">
-                        <input id="name_01" required="" class="form-control name input__field " type="text" name="name" />
-                        <label class="input__label" for="name_01">
-                            <span class="input__label-content">имя</span>
-                        </label>
-                    </span>
+                        <!--  Slider month -->
+                        <div class="slider_field form_row">
+                            <div class="slider_description clearfix slider_month-desc">
+                                <p class="value_label">Срок, мес. :</p>
+                                <div class="slider_value" id="slider_month-value"></div>
+                            </div>
+                            <div id="slider_month"></div>
+                        </div>
 
-                    <span class="input field">
-                        <input id="tel_01" required="" class="form-control name input__field" type="tel" name="phone"/>
-                        <label class="input__label" for="tel_01">
-                            <span class="input__label-content">телефон</span>
-                        </label>
-                    </span>
+                        <fieldset class="repayment_type form_row">
+                        <p class="value_label">График погашения:</p>
+                           <div class="radio_field">
+                               <input class="checked input_type" id="only_percents" type="radio" name="repaymentType" value='onlyPercents'>
+                                <label for="only_percents" class="radio_label">
+                                   <span>Только <br /> проценты</span>
+                               </label>
+                           </div>
+                            <div class="radio_field">
+                                <input class="input_type" id="for_the_rest" type="radio" name="repaymentType" value='forTheRest'>
+                                <label for="for_the_rest" class="radio_label">
+                                    <span>Платеж <br /> на остаток</span>
+                                </label>
+                            </div>
+                            <div class="radio_field">
+                                <input class="input_type" id="equal_parts" type="radio" name="repaymentType" value='equalParts'>
+                                <label for="equal_parts" class="radio_label">
+                                    <span>Платеж <br /> равными частями</span>
+                                </label>
+                            </div>
+                        </fieldset>
 
-                    <span class="input field">
-                        <input id="mail_01" required="" class="form-control name input__field" type="email" name="email" />
-                        <label class="input__label" for="mail_01">
-                            <span class="input__label-content">e-mail</span>
-                        </label>
-                    </span>
-                </div>
+                        <div class="form_row clearfix">
+                            <fieldset class="currency_type">
+                            <p class="value_label">Валюта:</p>
+                                <div class="radio_field">
+                                    <input class="checked input_currency" id="usd" type="radio" name="currencyType" value='usd'>
+                                     <label for="usd" class="radio_label">
+                                        <span>USD</span>
+                                    </label>
+                                </div>
+                                <div class="radio_field">
+                                    <input class="input_currency" id="uah" type="radio" name="currencyType" value='uah'>
+                                     <label for="uah" class="radio_label">
+                                        <span>UAH</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <div class="pledge_type_wrap">
+                            <p class="value_label">Недвижимость для залога:</p>
+                                <select name="zalog" id="" class="pledge_type">
+                                    <option selected value="Квартира">Квартира</option>
+                                    <option value="Дом">Дом</option>
+                                    <option value="Нежилое помещение">Нежилое помещение</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form_row total_row">
+                            <p class="total_text">Итого:</p>
+
+                            <div class="total_values">
+                                <div class="total_sum_block total_block">
+                                    <span class="value_label">Сумма:</span>
+                                    <div class="total_value" id="total_sum"></div>
+                                </div>
+                                <div class="total_month_block total_block">
+                                    <span class="value_label">Срок:</span>
+                                    <div class="total_value" id="total_month"></div>
+                                </div>
+                            </div>
+
+                            <div class="repayment_type_block">
+                                <p class="value_label repayment_type_label">Ежемесячный платеж:</p>
+                                <p class="payments_value" id="repayment_type_value"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="right_part">
+                    <p class="text--title title">Есть вопросы?</p>
+                    <p class="text">Отправьте расчеты менеджеру AFA. <br /> Он свяжется с вами в течении 20 минут и ответит <br /> на любой вопрос</p>
+                    <a class="md-trigger" data-modal="modal_callback">Перезвоните мне</a>
+                        <span class="input field">
+                            <input id="name_01" required="" class="form-control name input__field " type="text" name="name" />
+                            <label class="input__label" for="name_01">
+                                <span class="input__label-content">имя</span>
+                            </label>
+                        </span>
+
+                        <span class="input field">
+                            <input id="tel_01" required="" class="form-control name input__field" type="tel" name="phone"/>
+                            <label class="input__label" for="tel_01">
+                                <span class="input__label-content">телефон</span>
+                            </label>
+                        </span>
+
+                        <span class="input field">
+                            <input id="mail_01" required="" class="form-control name input__field" type="email" name="email" />
+                            <label class="input__label" for="mail_01">
+                                <span class="input__label-content">e-mail</span>
+                            </label>
+                        </span>
+                    </div>
 
 
-                <button type="submit" class="btn" name="send">ПОЛУЧИТЬ ЗАЙМ</button>
-            </form>
+                    <button type="submit" class="btn" name="send">ПОЛУЧИТЬ ЗАЙМ</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

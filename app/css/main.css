@@ -1,5 +1,6 @@
 @import url(../libs/niftymodal/component.css);
 @import url(../libs/slick/slick.min.css);
+@import url(../libs/noUiSlider.9.2.0/nouislider.css);
 .lineblock {
   position: relative;
   overflow: hidden;
@@ -101,7 +102,7 @@
     margin-bottom: 14px; }
 
 #sec_04 {
-  padding: 160px 0 120px; }
+  padding: 160px 0 130px; }
   #sec_04 h2 {
     margin-top: 40px;
     margin-bottom: 43px;
@@ -122,18 +123,157 @@
     margin: 35px 0 0 10px; }
 
 #sec_05 {
-  height: 1096px;
-  background-color: #282b2e;
+  padding: 135px 0;
+  background-image: url(../img/sec_05-bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
   position: relative;
-  overflow: hidden; }
-  #sec_05 img {
+  background-color: #f6f6f7; }
+  #sec_05 .grey {
     position: absolute;
+    left: 0;
     top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #282b2e; }
+  #sec_05 .col-12 {
+    position: relative;
+    z-index: 10; }
+  #sec_05 h2 {
+    color: #fff; }
+  #sec_05 .tc {
+    margin-top: -35px;
+    margin-bottom: 70px; }
+  #sec_05 form {
+    position: relative;
+    padding-bottom: 100px; }
+    #sec_05 form .title {
+      margin-bottom: 20px; }
+    #sec_05 form .text {
+      margin-bottom: 10px; }
+    #sec_05 form .md-trigger {
+      display: inline-block;
+      color: #000;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #000;
+      letter-spacing: .3em;
+      font-family: "Webnar-Bold", sans-serif;
+      padding-bottom: 3px;
+      margin-bottom: 100px; }
+    #sec_05 form .field {
+      max-width: 360px; }
+    #sec_05 form .field + .field {
+      margin-top: 28px; }
+  #sec_05 .btn {
+    position: absolute;
+    width: 220px;
     left: 50%;
-    margin-left: -960px; }
-
-#modal_callback_2 .title {
-  margin-bottom: 40px; }
+    margin-left: -110px;
+    bottom: 0; }
+  #sec_05 .left_part {
+    float: left;
+    width: 100%;
+    max-width: 460px; }
+  #sec_05 .right_part {
+    float: right;
+    width: 100%;
+    max-width: 460px; }
+  #sec_05 .value_label {
+    color: #8b8b8b;
+    font-family: "Webnar-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 26px; }
+  #sec_05 .slider_description {
+    margin-bottom: 30px; }
+    #sec_05 .slider_description .value_label {
+      float: left; }
+    #sec_05 .slider_description .slider_value {
+      float: right;
+      color: #4d81ee;
+      font-size: 16px;
+      line-height: 26px; }
+  #sec_05 .slider_field + .slider_field {
+    margin-top: 85px; }
+  #sec_05 .repayment_type {
+    margin-top: 75px;
+    margin-bottom: 35px; }
+    #sec_05 .repayment_type .value_label {
+      margin-bottom: 10px; }
+    #sec_05 .repayment_type .radio_field {
+      display: inline-block; }
+      #sec_05 .repayment_type .radio_field input {
+        display: none; }
+      #sec_05 .repayment_type .radio_field .radio_label {
+        cursor: pointer;
+        padding: 9px 31px;
+        font-size: 14px;
+        line-height: 16px;
+        float: left;
+        -webkit-transition: all .4s;
+        transition: all .4s; }
+      #sec_05 .repayment_type .radio_field input.checked + .radio_label {
+        background: #4d81ee;
+        color: #fff; }
+  #sec_05 .currency_type {
+    display: inline-block; }
+    #sec_05 .currency_type .value_label {
+      margin-bottom: 10px; }
+    #sec_05 .currency_type .radio_field {
+      display: inline-block; }
+      #sec_05 .currency_type .radio_field input {
+        display: none; }
+      #sec_05 .currency_type .radio_field .radio_label {
+        cursor: pointer;
+        padding: 9px 10px;
+        font-size: 14px;
+        line-height: 16px;
+        float: left;
+        -webkit-transition: all .4s;
+        transition: all .4s; }
+      #sec_05 .currency_type .radio_field input.checked + .radio_label {
+        background: #4d81ee;
+        color: #fff; }
+    #sec_05 .currency_type .radio_field + .radio_field {
+      margin-left: -2px; }
+  #sec_05 .pledge_type_wrap {
+    float: right; }
+    #sec_05 .pledge_type_wrap .value_label {
+      margin-bottom: 10px; }
+    #sec_05 .pledge_type_wrap select {
+      background: none;
+      font-size: 14px;
+      outline: none;
+      width: 265px;
+      padding: 10px 0;
+      color: #4d81ee;
+      border: none;
+      border-bottom: 1px solid #4d81ee; }
+  #sec_05 .total_row {
+    margin-top: 50px;
+    position: relative;
+    padding-left: 80px; }
+    #sec_05 .total_row .total_text {
+      position: absolute;
+      left: 0;
+      color: #fff; }
+    #sec_05 .total_row .total_values {
+      width: 150px;
+      display: inline-block; }
+    #sec_05 .total_row .total_value {
+      display: inline-block;
+      vertical-align: top;
+      float: right;
+      color: #ffffff;
+      font-family: "Webnar-Bold", sans-serif;
+      font-size: 18px;
+      line-height: 26px; }
+  #sec_05 .repayment_type_block {
+    float: right;
+    text-align: right;
+    vertical-align: top; }
+    #sec_05 .repayment_type_block .payments_value {
+      color: #fff; }
 
 #sec_06 {
   padding: 190px 0 100px; }
@@ -1131,6 +1271,30 @@ input:-ms-input-placeholder {
       display: none; }
     #sec_04 .sec_img {
       width: 480px; }
+  #sec_05 h2 {
+    text-align: center; }
+  #sec_05 .tc {
+    margin: 20px 0 40px; }
+  #sec_05 .grey {
+    width: 100%; }
+  #sec_05 .left_part, #sec_05 .right_part {
+    max-width: 600px;
+    float: none;
+    margin: 0 auto; }
+  #sec_05 .right_part {
+    color: #fff;
+    margin-top: 80px; }
+  #sec_05 form .title {
+    color: #fff; }
+  #sec_05 form .field {
+    max-width: 100%; }
+    #sec_05 form .field input {
+      color: #fff; }
+  #sec_05 form .md-trigger {
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    border-bottom: 1px solid #fff; }
   #sec_06 table {
     width: 100%;
     margin-left: 0;
@@ -1274,6 +1438,19 @@ input:-ms-input-placeholder {
   #sec_04 {
     overflow: hidden;
     padding: 140px 0; }
+  #sec_05 .left_part, #sec_05 .right_part {
+    max-width: 400px; }
+  #sec_05 .left_part, #sec_05 .right_part {
+    max-width: 400px; }
+  #sec_05 .total_row {
+    padding-left: 0; }
+    #sec_05 .total_row .total_text {
+      position: static;
+      margin-bottom: 10px; }
+  #sec_05 .repayment_type_block {
+    text-align: left; }
+  #sec_05 .repayment_type .radio_field .radio_label {
+    padding: 9px 20px; }
   #sec_06 table {
     width: 100%;
     margin-left: 0; }
@@ -1378,6 +1555,32 @@ input:-ms-input-placeholder {
       width: 100%;
       max-width: 500px;
       margin-top: 50px; }
+  #sec_05 {
+    padding: 90px 10px; }
+    #sec_05 h2 {
+      text-align: center; }
+    #sec_05 .tc {
+      margin: 20px 0 40px; }
+    #sec_05 .grey {
+      width: 100%; }
+    #sec_05 .left_part, #sec_05 .right_part {
+      max-width: 600px;
+      float: none;
+      margin: 0 auto; }
+    #sec_05 .right_part {
+      color: #fff;
+      margin-top: 80px; }
+    #sec_05 form .title {
+      color: #fff; }
+    #sec_05 form .field {
+      max-width: 100%; }
+      #sec_05 form .field input {
+        color: #fff; }
+    #sec_05 form .md-trigger {
+      color: #fff;
+      margin-bottom: 40px;
+      margin-top: 20px;
+      border-bottom: 1px solid #fff; }
   #sec_06 {
     padding: 130px 0 100px; }
     #sec_06 table {
@@ -1588,6 +1791,27 @@ input:-ms-input-placeholder {
     padding-top: 70px; }
   div[id*='modal_politics'] .btn_close_modal {
     top: 20px; } }
+
+@media (max-width: 500px) {
+  div[id*="modal_callback"] {
+    max-width: 500px;
+    min-width: 100%; }
+  #sec_05 .left_part, #sec_05 .right_part {
+    max-width: 400px; }
+  #sec_05 .total_row {
+    padding-left: 0; }
+    #sec_05 .total_row .total_text {
+      position: static;
+      margin-bottom: 10px; }
+  #sec_05 .pledge_type_wrap {
+    margin-top: 20px; }
+  #sec_05 .repayment_type_block {
+    margin-top: 20px;
+    text-align: left;
+    float: none; }
+  #sec_05 .repayment_type .radio_field {
+    display: block;
+    height: 50px; } }
 
 @media (max-width: 460px) {
   h2 {
