@@ -75,6 +75,7 @@
 #sec_03{
   padding: 40px 0;
   .youtube{
+    cursor: pointer;
     width: 515px;
     height: 340px;
     background-repeat: no-repeat;
@@ -166,6 +167,10 @@
       font-family: $title_font;
       padding-bottom: 3px;
       margin-bottom: 100px;
+      &:hover{
+        color: $main_color;
+        border-bottom: 1px solid $main_color;
+      }
     }
     .field{
       max-width: 360px;
@@ -259,6 +264,8 @@
     .value_label{margin-bottom: 10px;}
     float: right;
     select{
+      transition: box-shadow .4s;
+      cursor: pointer;
       background: none;
       font-size: 14px;
       outline: none;
@@ -269,7 +276,12 @@
       border-bottom: 1px solid $main_color;
     }
   }
-
+  .radio_field{
+    transition: box-shadow .4s;
+    cursor: pointer;
+  }
+  select:hover, .radio_field:hover{text-shadow: 0 0 10px rgba(255,255,255, .3);}
+  .noUi-handle.noUi-handle-lower{cursor: pointer}
   .total_row{
     margin-top: 50px;
     position: relative;
@@ -390,6 +402,9 @@
   .text a{
     text-decoration: underline;
     color: #000;
+    &:hover{
+      color: $main_color;
+    }
   }
 }
 
@@ -714,12 +729,25 @@
       .title{margin-bottom: 20px;}
     }
     .youtube{
+      cursor: pointer;
       width: 653px;
-      height: 430px;
-      background-size: 100%;
+      height: 400px;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: top center;
       background-image: url(../img/testim-video.png);
+      .play{
+        position: absolute;
+        cursor: pointer;
+        background-color: rgba(0,0,0,.6);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../img/play.png);
+        width: 100%;
+        height: 100%;
+        transition: all .4s;
+        &:hover{background-color: rgba(44,41,68,.5);}
+      }
     }
     .youtube_slide.slide{
       width: 653px !important;
@@ -727,6 +755,7 @@
       background-color: #FFF;
     }
   }
+  .mobile{display: none}
 }
 
 #sec_15{
@@ -976,8 +1005,6 @@ input:invalid{
   width: 100%;
 }
 
-
-
 .input__label::before,
 .input__label::after {
   content: '';
@@ -986,7 +1013,7 @@ input:invalid{
   left: 0;
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid #ebeef0;
+  border-bottom: 1px solid #b1b1b1;
 }
 
 .input__label::after {

@@ -59,7 +59,7 @@
   }
 
   $data = array(
-    'date_visited' => date("d.m.Y"),
+    'date_visited' => date("Y.m.d"),
     'time_visited' => date("G:i:s"),
     'page_url'     => $_SERVER['HTTP_HOST'],
     'utm_source'   => isset($_GET['utm_source']) ? $_GET['utm_source'] : null,

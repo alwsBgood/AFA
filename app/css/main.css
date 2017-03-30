@@ -76,6 +76,7 @@
 #sec_03 {
   padding: 40px 0; }
   #sec_03 .youtube {
+    cursor: pointer;
     width: 515px;
     height: 340px;
     background-repeat: no-repeat;
@@ -161,6 +162,9 @@
       font-family: "Webnar-Bold", sans-serif;
       padding-bottom: 3px;
       margin-bottom: 100px; }
+      #sec_05 form .md-trigger:hover {
+        color: #4d81ee;
+        border-bottom: 1px solid #4d81ee; }
     #sec_05 form .field {
       max-width: 360px; }
     #sec_05 form .field + .field {
@@ -241,6 +245,11 @@
     #sec_05 .pledge_type_wrap .value_label {
       margin-bottom: 10px; }
     #sec_05 .pledge_type_wrap select {
+      -webkit-transition: -webkit-box-shadow .4s;
+      transition: -webkit-box-shadow .4s;
+      transition: box-shadow .4s;
+      transition: box-shadow .4s, -webkit-box-shadow .4s;
+      cursor: pointer;
       background: none;
       font-size: 14px;
       outline: none;
@@ -249,6 +258,16 @@
       color: #4d81ee;
       border: none;
       border-bottom: 1px solid #4d81ee; }
+  #sec_05 .radio_field {
+    -webkit-transition: -webkit-box-shadow .4s;
+    transition: -webkit-box-shadow .4s;
+    transition: box-shadow .4s;
+    transition: box-shadow .4s, -webkit-box-shadow .4s;
+    cursor: pointer; }
+  #sec_05 select:hover, #sec_05 .radio_field:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+  #sec_05 .noUi-handle.noUi-handle-lower {
+    cursor: pointer; }
   #sec_05 .total_row {
     margin-top: 50px;
     position: relative;
@@ -353,6 +372,8 @@
   #sec_07 .text a {
     text-decoration: underline;
     color: #000; }
+    #sec_07 .text a:hover {
+      color: #4d81ee; }
 
 #sec_08 {
   padding: 10px 0 75px; }
@@ -632,16 +653,32 @@
     #sec_14 .slider_testimonials .slide .title {
       margin-bottom: 20px; }
   #sec_14 .slider_testimonials .youtube {
+    cursor: pointer;
     width: 653px;
-    height: 430px;
-    background-size: 100%;
+    height: 400px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top center;
     background-image: url(../img/testim-video.png); }
+    #sec_14 .slider_testimonials .youtube .play {
+      position: absolute;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.6);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/play.png);
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s;
+      transition: all .4s; }
+      #sec_14 .slider_testimonials .youtube .play:hover {
+        background-color: rgba(44, 41, 68, 0.5); }
   #sec_14 .slider_testimonials .youtube_slide.slide {
     width: 653px !important;
     padding: 0;
     background-color: #FFF; }
+  #sec_14 .mobile {
+    display: none; }
 
 #sec_15 {
   padding: 155px 0 200px; }
@@ -863,7 +900,7 @@ input:invalid {
   left: 0;
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid #ebeef0; }
+  border-bottom: 1px solid #b1b1b1; }
 
 .input__label::after {
   margin-top: 2px;

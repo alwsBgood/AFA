@@ -17,8 +17,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `visits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date_visited` varchar(11) NOT NULL,
-  `time_visited` varchar(8) NOT NULL,
+  `date_visited` date NOT NULL,
+  `time_visited` time NOT NULL,
   `page_url` varchar(255) NOT NULL,
   `utm_source` varchar(255) NOT NULL,
   `utm_campaign` varchar(255) NOT NULL,

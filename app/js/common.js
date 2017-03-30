@@ -13,9 +13,14 @@ $(function() {
    var error;
    var ref = btn.closest('form').find('[required]');
    var loc = ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country;
+
    $('[name=city').val(loc);
+   $('[name=kolichestvo_mesyacev]').val($('#slider_month-value').text());
+   $('[name=summa_kredita]').val($('#slider_sum-value').text());
+   $('[name=total_sum]').val($('#total_sum').text());
+
    var msg = btn.closest('form').find('input, textarea, select');
-   var short_msg = btn.closest('form').find('[name=project_name], [name=admin_email], [name=form_subject], [name=city], [name=page_url], [name=user_agent], [type="text"], [type="email"], [type="tel"]');
+   var short_msg = btn.closest('form').find('[name=project_name], [name=admin_email], [name=form_subject], [name=city], [name=page_url], [name=user_agent], [type="text"], [type="email"], [type="tel"], select, .checked.input_type, .checked.input_currency, [name=summa_kredita], [name=kolichestvo_mesyacev], [name=total_sum]');
    var msg = btn.closest('form').find('input, textarea, select');
    var send_btn = btn.closest('form').find('[name=send]');
    var send_adress = btn.closest('form').find('[name=send_adress]').val();
@@ -78,33 +83,27 @@ $(function() {
         setTimeout(function() {
           $("[name=send]").removeAttr("disabled");
         }, 1000);
-        $('div.md-show').removeClass('md-show');
-        $("#call_ok")[0].click()
-        // dataLayer.push({
-        //   'form_type': formType,
-        //   'event': "form_submit"
-        // });
           // Отправка в базу данных
-        //   $.ajax({
-        //    type: 'POST',
-        //    url: 'db/registration.php',
-        //    dataType: 'json',
-        //    data: form.serialize(),
-        //    success: function(response) {
-        //      console.info(response);
-        //      console.log(form.serialize());
-        //      if (response.status == 'success') {
-        //       $('form').trigger("reset");
-        //       // window.location.href = '/success';
-        //     }
-        //   }
-        // });
+          $.ajax({
+           type: 'POST',
+           url: 'db/registration.php',
+           dataType: 'json',
+           data: form.serialize(),
+           success: function(response) {
+             console.info(response);
+             console.log(form.serialize());
+             if (response.status == 'success') {
+              $('form').trigger("reset");
+              $('div.md-show').removeClass('md-show');
+              window.location.href = 'http://lp.afa.com.ua/success';
+            }
+          }
+        });
       },
       error: function(xhr, str) {
         console.log("Erorr")
       }
     });
-
   }
   return false;
 })
@@ -122,7 +121,7 @@ $(function() {
 //  INPUT TEL MASK
 
 jQuery(function($){
- $("input[type='tel']").mask("+9 (999) 999-9999");
+ $("input[type='tel']").mask("+38 (999) 999-9999");
 });
 
 
@@ -459,7 +458,11 @@ var sliderSumValueElement = document.getElementById('slider_sum-value');
 
 slider_sum.noUiSlider.on('update', function( values, handle ) {
   var fixedValues = Number(values[handle]).toFixed();
-  sliderSumValueElement.innerHTML =  '$ ' + fixedValues;
+  if ($('#usd').hasClass('checked')) {
+    sliderSumValueElement.innerHTML =  '$ ' + fixedValues;
+  } else if ($('#uah').hasClass('checked')) {
+    sliderSumValueElement.innerHTML =  '₴ ' + fixedValues;
+  }
 });
 
 
@@ -508,6 +511,8 @@ $('.input_type').click(function(event) {
 $('.input_currency').click(function(event) {
   $('.input_currency').removeClass('checked');
   $(this).addClass('checked');
+  $('.input_currency').val('');
+  $(this).val('chek');
   slider_month.noUiSlider.reset();
   slider_sum.noUiSlider.reset();
 });
@@ -517,6 +522,7 @@ $('.input_currency').click(function(event) {
 var totalSum = document.getElementById('total_sum');
 var totalMonth = document.getElementById('total_month');
 var repaymentTypeValue = document.getElementById('repayment_type_value');
+var repaymentTypeLabel = document.getElementById('repayment_type_label');
 
 
 // Обработчик слайдера суммы
@@ -534,6 +540,24 @@ slider_sum.noUiSlider.on('update', function(  values, handle ) {
     } else if ($('#equal_parts').hasClass('checked')){
         totalSum.innerHTML = '$ ' + (sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue));
         repaymentTypeValue.innerHTML = '$ ' + (((sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue)).toFixed()/sliderMonthValue).toFixed());
+    } else {
+      repaymentTypeLabel.innerHTML = 'Платеж по кредиту: ';
+      totalSum.innerHTML = '$ ' + (+sliderSumValue + +((sliderSumValue * 24 * (sliderMonthValue +1))/(2400)).toFixed());
+      repaymentTypeValue.innerHTML = '$ ' + (((sliderSumValue * 24 * (sliderMonthValue +1))/(2400)).toFixed());
+    }
+  } else if ($('#uah').hasClass('checked')){
+    totalMonth.innerHTML = sliderMonthValue + ' мес.';
+    if ($('#only_percents').hasClass('checked')){
+      totalSum.innerHTML = '₴ ' + (sliderSumValue + (sliderSumValue * 0.04 * sliderMonthValue));
+      repaymentTypeValue.innerHTML = '₴ ' + sliderSumValue * 0.04
+      + '<div> <p class="value_label repayment_type_label">Последний платеж : </p> <p class="payments_value">₴ ' + sliderSumValue + '</p> </div>';
+    } else if ($('#equal_parts').hasClass('checked')){
+        totalSum.innerHTML = '₴ ' + (sliderSumValue + (sliderSumValue * 0.04 * sliderMonthValue));
+        repaymentTypeValue.innerHTML = '₴ ' + (((sliderSumValue + (sliderSumValue * 0.04 * sliderMonthValue)).toFixed()/sliderMonthValue).toFixed());
+    } else {
+      repaymentTypeLabel.innerHTML = 'Платеж по кредиту: ';
+      totalSum.innerHTML = '₴ ' + (+sliderSumValue + +((sliderSumValue * 48 * (sliderMonthValue +1))/(2400)).toFixed());
+      repaymentTypeValue.innerHTML = '₴ ' + (((sliderSumValue * 48 * (sliderMonthValue +1))/(2400)).toFixed());
     }
   }
 });
@@ -552,6 +576,19 @@ slider_month.noUiSlider.on('update', function( values, handle ) {
     } else if ($('#equal_parts').hasClass('checked')){
         totalSum.innerHTML = '$ ' + (sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue));
         repaymentTypeValue.innerHTML = '$ ' + (((sliderSumValue + (sliderSumValue * 0.02 * sliderMonthValue)).toFixed()/sliderMonthValue).toFixed());
+    } else {
+      totalSum.innerHTML = '$ ' + (+sliderSumValue + +((sliderSumValue * 24 * (sliderMonthValue +1))/(2400)).toFixed());
+      repaymentTypeValue.innerHTML = '$ ' + (((sliderSumValue * 24 * (sliderMonthValue +1))/(2400)).toFixed());
+    }
+  } else if ($('#uah').hasClass('checked')){
+    if ($('#only_percents').hasClass('checked')){
+      totalSum.innerHTML = '₴ ' + (sliderSumValue + (sliderSumValue * 0.04 * sliderMonthValue));
+    } else if ($('#equal_parts').hasClass('checked')){
+        totalSum.innerHTML = '₴ ' + (sliderSumValue + (sliderSumValue * 0.04 * sliderMonthValue));
+        repaymentTypeValue.innerHTML = '₴ ' + (((sliderSumValue + (sliderSumValue * 0.04 * sliderMonthValue)).toFixed()/sliderMonthValue).toFixed());
+    } else {
+      totalSum.innerHTML = '₴ ' + (+sliderSumValue + +((sliderSumValue * 48 * (sliderMonthValue +1))/(2400)).toFixed());
+      repaymentTypeValue.innerHTML = '₴ ' + (((sliderSumValue * 48 * (sliderMonthValue +1))/(2400)).toFixed());
     }
   }
 });

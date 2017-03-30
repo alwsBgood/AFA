@@ -48,8 +48,15 @@
 }
 .noUi-handle {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  cursor: pointer;
+  transition: .4s all;
 }
+
+.noUi-handle:hover{
+  box-shadow: 0 0 10px rgba(255,255,255, .3) !important;
+}
+
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
   -webkit-transition: top 0.25s, right 0.25s, bottom 0.25s, left 0.25s;
@@ -343,6 +350,7 @@
   left: 5px;
   top: 0;
   transform: rotate(-45deg) translate(23px, -25px);
+  box-shadow: 0 0 10px rgba(255,255,255, .3) !important;
 }
 
 .noUi-tooltip span {
