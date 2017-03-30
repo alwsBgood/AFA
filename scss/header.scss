@@ -277,7 +277,6 @@ h2:before{
     a{
       color: #222;
       opacity: 0;
-      display: 0;
     }
   }
   li+li{margin-top: 20px;}
@@ -312,7 +311,7 @@ h2:before{
     position: relative;
     display: inline-block;
     // min-width: 180px;
-    padding-left: 30px;
+    padding-left: 15px;
     text-align: left;
     cursor: pointer;
     .icon{
@@ -472,13 +471,23 @@ path#middle {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   #sec_01{
     h1{
       font-size: 30px;
     }
     .afterheader{
         width: 90%;
+    }
+  }
+  #nav{
+    li+li{
+      margin-top: 0;
+    }
+    .contacts{
+      .link_block{
+        max-width: 145px;
+      }
     }
   }
 }

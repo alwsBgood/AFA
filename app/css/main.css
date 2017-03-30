@@ -76,6 +76,7 @@
 #sec_03 {
   padding: 40px 0; }
   #sec_03 .youtube {
+    position: relative;
     cursor: pointer;
     width: 515px;
     height: 340px;
@@ -84,9 +85,23 @@
     background-image: url(../img/video.png) !important;
     -webkit-transition: all .4s;
     transition: all .4s; }
-    #sec_03 .youtube:hover {
-      -webkit-box-shadow: 0 0 20px #4d81ee;
-      box-shadow: 0 0 20px #4d81ee; }
+    #sec_03 .youtube:hover .play {
+      -webkit-box-shadow: 0 0 20px #fff;
+      box-shadow: 0 0 20px #fff; }
+    #sec_03 .youtube .play {
+      position: absolute;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/play.png);
+      width: 70px;
+      height: 70px;
+      top: 50%;
+      margin-left: -35px;
+      left: 50%;
+      margin-top: -35px;
+      -webkit-transition: all .4s;
+      transition: all .4s; }
   #sec_03 h2 {
     margin-top: 40px;
     margin-bottom: 70px;
@@ -277,7 +292,7 @@
       left: 0;
       color: #fff; }
     #sec_05 .total_row .total_values {
-      width: 150px;
+      width: 165px;
       display: inline-block; }
     #sec_05 .total_row .total_value {
       display: inline-block;
@@ -672,7 +687,7 @@
       -webkit-transition: all .4s;
       transition: all .4s; }
       #sec_14 .slider_testimonials .youtube .play:hover {
-        background-color: rgba(44, 41, 68, 0.5); }
+        background-color: rgba(0, 0, 0, 0.2); }
   #sec_14 .slider_testimonials .youtube_slide.slide {
     width: 653px !important;
     padding: 0;
@@ -1613,9 +1628,11 @@ input:-ms-input-placeholder {
       max-width: 100%; }
       #sec_05 form .field input {
         color: #fff; }
+    #sec_05 form .text br {
+      display: none; }
     #sec_05 form .md-trigger {
       color: #fff;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       margin-top: 20px;
       border-bottom: 1px solid #fff; }
   #sec_06 {
@@ -1660,6 +1677,8 @@ input:-ms-input-placeholder {
       margin-top: 80px; }
     #sec_07 .title {
       font-size: 18px; }
+      #sec_07 .title br {
+        display: none; }
     #sec_07 .text br {
       display: none; }
   #sec_08 {
@@ -1830,6 +1849,8 @@ input:-ms-input-placeholder {
     top: 20px; } }
 
 @media (max-width: 500px) {
+  #sec_12 {
+    display: none; }
   div[id*="modal_callback"] {
     max-width: 500px;
     min-width: 100%; }
@@ -1841,14 +1862,30 @@ input:-ms-input-placeholder {
       position: static;
       margin-bottom: 10px; }
   #sec_05 .pledge_type_wrap {
-    margin-top: 20px; }
+    width: 200px; }
+    #sec_05 .pledge_type_wrap .pledge_type {
+      width: 100%; }
   #sec_05 .repayment_type_block {
     margin-top: 20px;
     text-align: left;
     float: none; }
-  #sec_05 .repayment_type .radio_field {
-    display: block;
-    height: 50px; } }
+  #sec_05 .repayment_type .radio_field .radio_label {
+    padding: 8px 10px;
+    font-size: 12px; }
+  #sec_11 {
+    padding-bottom: 20px; }
+  #sec_14 {
+    padding-top: 80px; }
+    #sec_14 h2 {
+      margin-top: 00px; }
+  .noUi-horizontal .noUi-handle,
+  .noUi-vertical .noUi-handle {
+    width: 24px;
+    height: 24px;
+    left: -13px;
+    top: -10px; }
+  .noUi-target.noUi-horizontal .noUi-active .noUi-tooltip {
+    left: 10px; } }
 
 @media (max-width: 460px) {
   h2 {
@@ -1869,11 +1906,15 @@ input:-ms-input-placeholder {
     width: 100%; }
   #sec_11 .item + .item {
     margin-top: 0; }
+  #sec_11 .item {
+    text-align: center; }
+  #sec_14 .row {
+    margin: 0 -20px; }
   #sec_14 .text {
     font-size: 14px;
     line-height: 20px; }
   #sec_14 .slider_testimonials {
-    width: 260px;
+    width: 300px;
     margin: 0 auto; }
     #sec_14 .slider_testimonials .slide {
       padding: 20px 40px; }
@@ -1881,7 +1922,15 @@ input:-ms-input-placeholder {
         position: static;
         margin-bottom: 20px; }
     #sec_14 .slider_testimonials .youtube_slide.slide {
-      width: 260px !important; }
+      width: 300px !important; }
     #sec_14 .slider_testimonials .youtube {
-      width: 260px;
-      height: 200px; } }
+      width: 300px;
+      height: 200px; }
+  #sec_16 h2 {
+    text-align: center; }
+  #sec_16 li {
+    width: 225px;
+    margin-left: auto;
+    margin-right: auto; }
+    #sec_16 li br {
+      display: none; } }

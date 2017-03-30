@@ -449,9 +449,12 @@
           color: #fff;
         }
       }
+      .text{
+        br{display: none;}
+      }
       .md-trigger{
         color: #fff;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         margin-top: 20px;
         border-bottom: 1px solid #fff;
       }
@@ -506,7 +509,10 @@
       margin: 0 auto;
     }
     .item{margin-top: 80px;}
-    .title{font-size: 18px;}
+    .title{
+      font-size: 18px;
+      br{display: none}
+    }
     .text{
       br{display: none;}
     }
@@ -709,6 +715,7 @@
 
 
 @media (max-width: 500px) {
+  #sec_12{display:none;}
   div[id*="modal_callback"]{
     max-width: 500px;
     min-width: 100%;
@@ -725,7 +732,10 @@
       padding-left: 0;
     }
     .pledge_type_wrap{
-      margin-top: 20px;
+      width: 200px;
+      .pledge_type{
+        width: 100%;
+      }
     }
     .repayment_type_block{
       margin-top: 20px;
@@ -733,9 +743,28 @@
       float: none;
     }
     .repayment_type .radio_field {
-      display: block;
-      height: 50px;
+      .radio_label{
+        padding: 8px 10px;
+        font-size: 12px;
+      }
     }
+  }
+  #sec_11{
+    padding-bottom: 20px;
+  }
+  #sec_14{
+    padding-top: 80px;
+    h2{margin-top: 00px;}
+  }
+  .noUi-horizontal .noUi-handle,
+  .noUi-vertical .noUi-handle {
+    width: 24px;
+    height: 24px;
+    left: -13px;
+    top: -10px;
+  }
+  .noUi-target.noUi-horizontal .noUi-active .noUi-tooltip {
+    left: 10px;
   }
 }
 
@@ -762,14 +791,20 @@
     .separator{margin-top: 30px;}
     .col-2{width: 100%;}
     .item+.item{margin-top: 0;}
+    .item{
+      text-align: center;
+    }
   }
   #sec_14{
+    .row{
+      margin: 0 -20px;
+    }
     .text{
       font-size: 14px;
       line-height: 20px;
     }
     .slider_testimonials {
-      width: 260px;
+      width: 300px;
       margin: 0 auto;
       .slide{
         padding: 20px 40px;
@@ -779,12 +814,21 @@
         }
       }
       .youtube_slide.slide{
-        width: 260px !important;
+        width: 300px !important;
       }
       .youtube{
-        width: 260px;
+        width: 300px;
         height: 200px;
       }
+    }
+  }
+  #sec_16{
+    h2{text-align: center;}
+    li{
+      width: 225px;
+      margin-left: auto;
+      margin-right: auto;
+      br{display: none;}
     }
   }
 }

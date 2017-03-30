@@ -8,6 +8,7 @@ if ( $method === 'POST' ) {
 
 	$project_name = trim($_POST["project_name"]);
 	$admin_email  = trim($_POST["admin_email"]);
+	$second_admin_email  = trim($_POST["second_admin_email"]);
 	$form_subject = trim($_POST["form_subject"]);
 
 	foreach ( $_POST as $key => $value ) {
@@ -50,3 +51,4 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
 mail($admin_email, adopt($form_subject), $message, $headers );
+mail($second_admin_email, adopt($form_subject), $message, $headers );
