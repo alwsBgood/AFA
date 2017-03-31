@@ -190,6 +190,7 @@ h2:before{
         li+li{margin-left: 25px;}
         a{
             color: $main_text_color;
+            letter-spacing: .02em;
 
             &:hover{
                 color: $main_color;
