@@ -389,18 +389,18 @@
                         <tr class="text--title">
                             <td></td>
                             <td>В долларах <br> США</td>
-                            <td>Особые <br> условия</td>
+                            <td>Аннуитет</td>
                             <td>Максимальная</td>
                             <td>Авансовый <br> платеж</td>
                             <td>В гривне</td>
                         </tr>
                         <tr>
                             <td class="title text--title"><span>Процентная  <br> ставка по займу  <br> / месяц</span></td>
-                            <td>2,5 % <br> (30% год.)</td>
-                            <td>От 2,2% <br> до 3 % <br> (26% год.)</td>
+                            <td>2 % <br> (30% год.)</td>
+                            <td>От 2% <br> до 3 % <br> (26% год.)</td>
                             <td>2,9% <br> (34,8% год.)</td>
                             <td>От 2 до 3% <br> (24% год.)</td>
-                            <td>От 2 до 3% <br> (24% год.)</td>
+                            <td>От 3,5% до 4% <br> (48% год.)</td>
                         </tr>
                         <tr>
                             <td class="title text--title"><span>Комиссия</span></td>
@@ -416,7 +416,7 @@
                             <td>50-60% </td>
                             <td>75-85% </td>
                             <td>до 30%</td>
-                            <td>50-70%USD</td>
+                            <td>50-70%</td>
                         </tr>
                         <tr>
                             <td class="title text--title"><span>Валюта</span></td>
@@ -659,7 +659,7 @@
                 </div>
                 <div class="item">
                     <img src="img/empl-6.png" alt="Сотрудники AFA" class="empl_img">
-                    <p class="name text--title">Эрастова Инга</p>
+                    <p class="name text--title">Кательницкая Светлана</p>
                 </div>
             </div>
             <div class="col-2">
@@ -741,39 +741,53 @@
             <h2 class="text--title">ЧТО ГОВОРЯТ</h2>
             <p class="text--title title">Те, кто уже оформил кредит в AFA</p>
                 <div class="slider_control">
-                    <div class="slide"><p><span>1</span> / 5</p></div>
-                    <div class="slide"><p><span>2</span> / 5</p></div>
-                    <div class="slide"><p><span>3</span> / 5</p></div>
-                    <div class="slide"><p><span>4</span> / 5</p></div>
-                    <div class="slide"><p><span>5</span> / 5</p></div>
+                    <div class="slide"><p><span>1</span> / 6</p></div>
+                    <div class="slide"><p><span>2</span> / 6</p></div>
+                    <div class="slide"><p><span>3</span> / 6</p></div>
+                    <div class="slide"><p><span>4</span> / 6</p></div>
+                    <div class="slide"><p><span>5</span> / 6</p></div>
+                    <div class="slide"><p><span>6</span> / 6</p></div>
                 </div>
             </div>
             <div class="col-7">
                 <div class="slider_testimonials">
-
-                    <div class="slide">
-                        <img src="img/testim-2.png" alt="Отзывы клиентов об AFA" class="testim_img">
-                        <p class="testim_name title text--title">Николай</p>
-                        <p class="text">Получил в этой компании кредит для своего бизнеса в считанные дни! Очень доволен подходом специалистов, процентным ставкам и стилем работы. Кредит под залог брал первый раз, поэтому был приятно удивлен процессом оформления. Могу советовать эту компанию другим заемщикам</p>
+                    <div class="slide_wrap">
+                        <div class="slide youtube_slide">
+                            <div class="youtube" id="q-K9WEmeJCA"></div>
+                        </div>
                     </div>
-
-                    <div class="slide youtube_slide">
-                        <div class="youtube" id="q-K9WEmeJCA"></div>
+                    <div class="slide_wrap">
+                        <div class="slide youtube_slide">
+                            <div class="youtube" id="qvDA37w4S5M"></div>
+                        </div>
                     </div>
-                    <div class="slide">
-                        <img src="img/testim-1.png" alt="Отзывы клиентов об AFA" class="testim_img">
-                        <p class="testim_name title text--title">Кристина</p>
-                        <p class="text">Мы с мужем часто пользуемся кредитами, в прошлом брали кредиты на технику и небольшие займы в банках. Но по опыту знаем, что сейчас крупную сумму можно получить только под залог. Эту компанию нам рекомендовали знакомые, поэтому сразу знали, что переживать о честности не стоит. Выдали нам деньги буквально за пару дней, все оформили как положено, расписали и рассказали. Приятное отношение и специалисты, красивый офис, хорошие условия. Поэтому спасибо.</p>
+                    <div class="slide_wrap">
+                        <div class="slide">
+                            <img src="img/testim-2.png" alt="Отзывы клиентов об AFA" class="testim_img">
+                            <p class="testim_name title text--title">Николай</p>
+                            <p class="text">Получил в этой компании кредит для своего бизнеса в считанные дни! Очень доволен подходом специалистов, процентным ставкам и стилем работы. Кредит под залог брал первый раз, поэтому был приятно удивлен процессом оформления. Могу советовать эту компанию другим заемщикам</p>
+                        </div>
                     </div>
-                    <div class="slide">
-                        <img src="img/testim-3.png" alt="Отзывы клиентов об AFA" class="testim_img">
-                        <p class="testim_name title text--title">Сергей</p>
-                        <p class="text">Эта компания очень помогла мне с моим start-up`ом, денег как обычно на все про все не хватило, а был риск, что мы так нечего и не запустим. Я получил 320 тыс грн, и сейчас выплатил уже больше половины долга. Работа кипит!</p>
+                    <div class="slide_wrap">
+                        <div class="slide">
+                            <img src="img/testim-1.png" alt="Отзывы клиентов об AFA" class="testim_img">
+                            <p class="testim_name title text--title">Кристина</p>
+                            <p class="text">Мы с мужем часто пользуемся кредитами, в прошлом брали кредиты на технику и небольшие займы в банках. Но по опыту знаем, что сейчас крупную сумму можно получить только под залог. Эту компанию нам рекомендовали знакомые, поэтому сразу знали, что переживать о честности не стоит. Выдали нам деньги буквально за пару дней, все оформили как положено, расписали и рассказали. Приятное отношение и специалисты, красивый офис, хорошие условия. Поэтому спасибо.</p>
+                        </div>
                     </div>
-                    <div class="slide">
-                        <img src="img/testim-4.png" alt="Отзывы клиентов об AFA" class="testim_img">
-                        <p class="testim_name title text--title">Людмила Кравчук</p>
-                        <p class="text">Нам с мужем понадобились деньги на развитие нашего интернет магазина. Получили необходимые деньги под залог своего автомобиля Kia 2014 года, продолжая им пользоватся. Адекватные проценты, быстрая выдача денег, все договора в порядке. С такими людьми приятно сотрудничать, все четко и ясно. Спасибо!</p>
+                    <div class="slide_wrap">
+                        <div class="slide">
+                            <img src="img/testim-3.png" alt="Отзывы клиентов об AFA" class="testim_img">
+                            <p class="testim_name title text--title">Сергей</p>
+                            <p class="text">Эта компания очень помогла мне с моим start-up`ом, денег как обычно на все про все не хватило, а был риск, что мы так нечего и не запустим. Я получил 320 тыс грн, и сейчас выплатил уже больше половины долга. Работа кипит!</p>
+                        </div>
+                    </div>
+                    <div class="slide_wrap">
+                        <div class="slide">
+                            <img src="img/testim-4.png" alt="Отзывы клиентов об AFA" class="testim_img">
+                            <p class="testim_name title text--title">Людмила Кравчук</p>
+                            <p class="text">Нам с мужем понадобились деньги на развитие нашего интернет магазина. Получили необходимые деньги под залог своего автомобиля Kia 2014 года, продолжая им пользоватся. Адекватные проценты, быстрая выдача денег, все договора в порядке. С такими людьми приятно сотрудничать, все четко и ясно. Спасибо!</p>
+                        </div>
                     </div>
                 </div>
             </div>

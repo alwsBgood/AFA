@@ -81,7 +81,7 @@
     height: 340px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../img/video.png) !important;
+    // background-image: url(../img/video.png) !important;
     transition: all .4s;
     &:hover{
       .play{box-shadow: 0 0 20px #fff;}
@@ -746,6 +746,7 @@
       .title{margin-bottom: 20px;}
     }
     .youtube{
+      position: relative;
       cursor: pointer;
       width: 653px;
       height: 400px;
@@ -766,10 +767,9 @@
         &:hover{background-color: rgba(0,0,0,.2);}
       }
     }
+
     .youtube_slide.slide{
-      width: 653px !important;
       padding: 0;
-      background-color: #FFF;
     }
   }
   .mobile{display: none}

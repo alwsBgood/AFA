@@ -184,7 +184,8 @@ h2:before {
     #sec_01 .nav li + li {
       margin-left: 25px; }
     #sec_01 .nav a {
-      color: #8b8b8b; }
+      color: #8b8b8b;
+      letter-spacing: .02em; }
       #sec_01 .nav a:hover {
         color: #4d81ee; }
   #sec_01 .btn_call {
@@ -252,7 +253,8 @@ h2:before {
     text-transform: uppercase; }
     #nav li a {
       color: #222;
-      opacity: 0; }
+      opacity: 0;
+      letter-spacing: .02em; }
   #nav li + li {
     margin-top: 20px; }
   #nav .inner {

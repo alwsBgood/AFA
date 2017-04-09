@@ -130,8 +130,8 @@ $(document).ready(function(){
     slidesToShow: 1,
     dots: false,
     arrows: false,
+    fade: true,
     slidesToScroll: 1,
-    adaptiveHeight: true,
     asNavFor: '.slider_control'
   });
 });
@@ -200,7 +200,7 @@ $(window).scroll(function() {
 
 $(function() {
   $(".youtube").each(function() {
-    // $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+    $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
     $(this).append($('<div/>', {'class': 'play'}));
 
