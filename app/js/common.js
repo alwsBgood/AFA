@@ -21,6 +21,7 @@ $(function() {
 
    var msg = btn.closest('form').find('input, textarea, select');
    var short_msg = btn.closest('form').find('[name=project_name], [name=admin_email], [name=form_subject], [name=city], [name=page_url], [name=user_agent], [type="text"], [type="email"], [type="tel"], select, .checked.input_type, .checked.input_currency, [name=summa_kredita], [name=kolichestvo_mesyacev], [name=total_sum]');
+   var calc_msg = btn.closest('form').find('select, .checked.input_type, .checked.input_currency, [name=summa_kredita], [name=kolichestvo_mesyacev], [name=total_sum]');
    var msg = btn.closest('form').find('input, textarea, select');
    var send_btn = btn.closest('form').find('[name=send]');
    var send_adress = btn.closest('form').find('[name=send_adress]').val();
@@ -66,6 +67,11 @@ $(function() {
    if (!(error == 1)) {
     $(send_btn).each(function() {
       $(this).attr('disabled', true);
+    });
+    dataLayer.push({
+      'event': 'formSubmit',
+      'form_type': goal,
+      'calc_data' : calc_msg
     });
      // Отправка в Google sheets
      $.ajax({
