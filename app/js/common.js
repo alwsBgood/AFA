@@ -21,8 +21,7 @@ $(function() {
 
    var msg = btn.closest('form').find('input, textarea, select');
    var short_msg = btn.closest('form').find('[name=project_name], [name=admin_email], [name=form_subject], [name=city], [name=page_url], [name=user_agent], [type="text"], [type="email"], [type="tel"], select, .checked.input_type, .checked.input_currency, [name=summa_kredita], [name=kolichestvo_mesyacev], [name=total_sum]');
-   var calc_msg = btn.closest('form').find('select, .checked.input_type, .checked.input_currency, [name=summa_kredita], [name=kolichestvo_mesyacev], [name=total_sum]');
-   var msg = btn.closest('form').find('input, textarea, select');
+   var calc_msg = 'График погашения ' + $('.checked.input_type').val() + ' | Валюта: ' + $('.checked.input_currency').val() + ' | Сумма кредита: ' + $('[name=summa_kredita]').val() + ' | Срок: ' + $('[name=kolichestvo_mesyacev]').val() + ' | Общая сумма: ' + $('[name=total_sum]').val() + ' | Залог: ' + $('select').val();
    var send_btn = btn.closest('form').find('[name=send]');
    var send_adress = btn.closest('form').find('[name=send_adress]').val();
    var send_options = btn.closest('form').find('[name=campaign_token]');;
