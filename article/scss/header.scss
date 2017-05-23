@@ -48,7 +48,7 @@ h3{
     height: 186px;
     top: -40px;
     left: 0;
-    background: url(../img/geometry-1.png)
+    background: url(img/geometry-1.png)
   }
 }
 
@@ -61,7 +61,7 @@ h3{
     height: 63px;
     top: -40px;
     left: 0;
-    background: url(../img/geometry-2.png)
+    background: url(img/geometry-2.png)
   }
 }
 
@@ -74,7 +74,7 @@ h3{
     height: 150px;
     top: -40px;
     left: 0;
-    background: url(../img/geometry-3.png)
+    background: url(img/geometry-3.png)
   }
 }
 
@@ -87,7 +87,7 @@ h3{
     height: 50px;
     top: -40px;
     left: 0;
-    background: url(../img/geometry-4.png)
+    background: url(img/geometry-4.png)
   }
 }
 
@@ -100,7 +100,7 @@ h3{
     height: 152px;
     top: -40px;
     left: 0;
-    background: url(../img/geometry-5.png)
+    background: url(img/geometry-5.png)
   }
 }
 
@@ -112,7 +112,7 @@ h3{
     height: 52px;
     top: -40px;
     left: 0;
-    background: url(../img/geometry-6.png)
+    background: url(img/geometry-6.png)
   }
 }
 
@@ -307,8 +307,13 @@ h2:before, h3:before{
 
 .blue_text{
   border-left: 4px solid #373a3f;
-  padding: 1px 0 1px 18px;
+  padding: 0px 0 0px 18px;
   letter-spacing: .09em;
+}
+
+.sec_img{
+  width: 100%;
+  max-width: 1140px;
 }
 
 .item_img{margin-top: 10px}
@@ -418,6 +423,7 @@ h2:before, h3:before{
   .form_block{
     background-color: #f6f6f7;
     padding: 70px;
+    margin-bottom: 60px;
   }
   .btn{
     width: 246px;
@@ -428,4 +434,307 @@ h2:before, h3:before{
     width: 340px;
   }
   .field+.field{margin-left: 25px;}
+  .logo_btm{
+    margin: 10px 0 0;
+  }
+}
+
+
+footer{
+  padding: 15px 0 15px;
+  background-color: #202020;
+  .politics{
+    margin-top: 9px;
+    a{
+      color: #65666a;
+      font-size: 15px;
+    }
+    a:hover{color: $main_color;}
+    a+a{margin-left: 10px;}
+  }
+  .logo_rezart{
+    margin-top: 3px;
+    margin-left: 0px;
+    width: 48px;
+    // margin-right: 20px;
+    float: right;
+    svg{
+      fill: #fff;
+      transition: fill .3s;
+    }
+    &:hover{
+      svg{
+        fill: $main_color;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .col-8{width: 75%;}
+  .col-4{width: 25%;}
+  h2{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .title{
+    font-size: 16px;
+  }
+  .text{font-size: 15px;}
+  #sec_01{padding-top: 80px;}
+  .row-1{
+    .left_block{margin-left: -190px;}
+    .right_block{
+      margin-left: 10px;
+      width: 362px;
+    }
+    .right_text{
+      width: 362px;
+    }
+  }
+  .img-1{margin-top: -30px;}
+  .row-3{
+    .left_block{
+      max-width: 100%;
+    }
+    .right_block{
+      display: none
+    }
+  }
+  .row-5{
+    margin-top: 10px;
+    .col-5{
+      width: 50%;
+      margin: 0;
+    }
+    .blue_text{
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .img-3{
+    margin-top: 25px;
+    width: 100%;
+  }
+  .img-4{
+    margin-left: -20px;
+  }
+  .img-5{width: 100%;}
+
+  #sec_03{
+    padding-bottom: 100px;
+    .btn{
+      width: 260px;
+      display: block;
+      margin: 40px auto 0px;
+    }
+    .field{
+      width: 270px;
+    }
+    .field+.field{margin-left: 35px;}
+  }
+  footer{
+    .politics a{
+      font-size: 14px;
+    }
+  }
+  br{display: none}
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+  .col-8{width: 75%;}
+  .col-4{width: 25%;}
+  h2{
+    font-size: 23px;
+    line-height: 30px;
+  }
+  #sec_01{padding-top: 80px;}
+  .row-1{
+    .right_block{
+      margin-left: 10px;
+      width: 430px;
+    }
+  }
+  .row-3{
+    .left_block{
+      max-width: 480px;
+    }
+    .right_block{
+      max-width: 185px;
+      width: 100%;
+      margin-left: 5px;
+      margin-right: -15px;
+    }
+  }
+  .img-2{
+    width: 250px;
+    margin-top: 20px;
+  }
+  .row-5{
+    margin-top: 10px;
+    .col-5{
+      width: 50%;
+      margin: 0;
+    }
+    .blue_text{margin-top: 0;}
+  }
+  .img-3{margin-top: -0px;}
+  .img-5{width: 100%;}
+
+  #sec_03{
+    padding-bottom: 100px;
+    .form_block{padding: 70px 40px;}
+    .btn{
+      width: 260px;
+      vertical-align: bottom;
+      margin-left: 25px;
+    }
+    .field{
+      width: 270px;
+    }
+    .field+.field{margin-left: 20px;}
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  [class*='col-']{
+    width: 100%;
+    margin: 0;
+  }
+  br{display: none}
+  h2:before{
+    animation: none;
+  }
+  div[id*='modal_politics']{
+    h2{padding-top: 70px;}
+    .btn_close_modal{
+      top: 20px;
+    }
+  }
+  .header_sm:after{display: none}
+
+  #sec_01{
+    padding-top: 20px;
+    .logo{margin-bottom: 30px;}
+    h1{
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .separator{margin-bottom: 30px;}
+  }
+  h2+.separator{margin-bottom: 20px;}
+  .title{
+    font-size: 16px;
+  }
+  .text{font-size: 15px;}
+  #sec_01{padding-top: 40px;}
+  .row-1{
+    .left_block{
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    .right_block{
+      margin-left: 10px;
+      width: 100%;
+      max-width: 100%;
+      float: none;
+    }
+    .right_text{
+      width: 100%;
+      max-width: 100%;
+      float: none;
+      display: inline;
+    }
+    .img-1{
+      margin-top: 20px;
+      width: 100%;
+      margin: 20px 0;
+      max-width: 340px;
+    }
+  }
+
+  .row-3{
+    .left_block{
+      max-width: 100%;
+    }
+    .right_block{
+      display: none
+    }
+  }
+  .row-5{
+    margin-top: 10px;
+    .blue_text{
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .row-7{
+    .item{margin-right: 0;}
+    .text_img{
+      line-height: 26px;
+    }
+  }
+  .img-3{
+    margin: 25px 0;
+    width: 100%;
+    max-width: 436px;
+  }
+  .img-4{
+    width: 100%;
+    float: none;
+    margin: 20px 0 0;
+    max-width: 290px;
+    display: block;
+  }
+  .img-5{
+    width: 100%;
+    max-width: 290px;
+    margin-bottom: 20px;
+  }
+
+  #sec_03{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .form_block{
+      padding: 50px 40px;
+    }
+    .btn{
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 40px auto 0px;
+    }
+    .field{
+      width: 100%;
+    }
+    .field+.field{margin-left: 0px; margin-top: 20px;}
+  }
+
+  footer{
+    text-align: center;
+    .politics{
+      a{
+         font-size: 14px;
+         display: block;
+         text-align: center;
+       }
+     a+a{margin-left: 0 }
+    }
+    .logo_rezart{
+      display: inline-block;
+      float: none;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+
+@media (max-width: 460px) {
+  h2{
+    font-size: 28px;
+    line-height: 34px;
+  }
 }

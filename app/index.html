@@ -857,7 +857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <!-- Hidden Required Fields -->
                         <input type="hidden" name="project_name" value="AFA">
-                        <input type="hidden" name="admin_email" value="zayavka@afa.com.ua">
+                        <input type="hidden" name="admin_email" value="inga.erastova@gmail.com">
                         <input type="hidden" name="second_admin_email" value="zayavka@afa.com.ua">
                         <input type="hidden" name="form_subject" value="Свяжитесь со мной">
                         <input type="hidden" name="goal" value="application">
