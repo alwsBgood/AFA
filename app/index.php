@@ -1,9 +1,7 @@
-<?php
+ <?php
     require 'db/data.php';
     require 'db/visits.php';
 ?>
-
-
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
 
@@ -125,7 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="#sec_05" class="scroll">Калькулятор</a></li>
                     <li><a href="#sec_16" class="scroll">Контакты</a></li>
                 </ul>
-                <a class="md-trigger text--title btn_call flex" data-modal="modal_callback"><span>мы перезвоним</span></a>
+                <a id="cta_1" class="md-trigger text--title btn_call flex" data-modal="modal_callback"><span>мы перезвоним</span></a>
             </div>
         </div>
 
@@ -134,7 +132,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p class="beforeheader text--title">Advance finance alliance</p>
                 <h1 class="text--title"><span>P2P</span>финансирование <br> в Украине</h1>
                 <p class="text--blue afterheader">Получите займ под залог недвижимости за один день</p>
-                <a href="#sec_02" class="btn flex scroll">Узнать больше</a>
+                <a id="cta_2"  href="#sec_02" class="btn flex scroll">Узнать больше</a>
             </div>
         </div>
     </div>
@@ -458,7 +456,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <p class="number text--title text--blue">01</p>
                     <p class="text--title title">Подача <br> Заявки</p>
-                    <p class="text">Вы звоните или <a class="md-trigger" data-modal="modal_callback">оставляете заявку</a>. Мы перезвоним, ответим на ваши вопросы <br> и договоримся <br> о встрече</p>
+                    <p class="text">Вы звоните или <a id="cta_3"  class="md-trigger" data-modal="modal_callback">оставляете заявку</a>. Мы перезвоним, ответим на ваши вопросы <br> и договоримся <br> о встрече</p>
                 </div>
             </div>
             <div class="col-2">
@@ -618,7 +616,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="item">
                     <p class="text--title title">Хотите задать вопрос?</p>
                     <p class="text">Жмите на кнопку — наш специалист <br> позвонит вам и ответит на все вопросы.</p>
-                    <a class="md-trigger btn flex" data-modal="modal_callback">Заказать звонок</a>
+                    <a id="cta_4"  class="md-trigger btn flex" data-modal="modal_callback">Заказать звонок</a>
                 </div>
             </div>
         </div>
@@ -809,11 +807,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2 class="text--title">ЧТО ГОВОРЯТ</h2>
             <p class="text--title title">Те, кто уже оформил кредит в AFA</p>
                 <div class="slider_control">
-                    <div class="slide"><p><span>1</span> / 5</p></div>
-                    <div class="slide"><p><span>2</span> / 5</p></div>
-                    <div class="slide"><p><span>3</span> / 5</p></div>
-                    <div class="slide"><p><span>4</span> / 5</p></div>
-                    <div class="slide"><p><span>5</span> / 5</p></div>
+                    <div class="slide"><p><span>1</span> / 6</p></div>
+                    <div class="slide"><p><span>2</span> / 6</p></div>
+                    <div class="slide"><p><span>3</span> / 6</p></div>
+                    <div class="slide"><p><span>4</span> / 6</p></div>
+                    <div class="slide"><p><span>5</span> / 6</p></div>
+                    <div class="slide"><p><span>6</span> / 6</p></div>
                 </div>
             </div>
         </div>
@@ -924,7 +923,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a target="_blank" href="https://vk.com/afa_kiev"><img src="img/vk.png" alt=""></a></li>
                     <li><a target="_blank" href="https://twitter.com/AFA_Credit"><img src="img/twitter.png" alt=""></a></li>
                 </ul>
-                <a class="md-trigger text--title btn_call flex" data-modal="modal_callback"><span>мы перезвоним</span></a>
+                <a id="cta_5"  class="md-trigger text--title btn_call flex" data-modal="modal_callback"><span>мы перезвоним</span></a>
             </div>
         </div>
     </div>

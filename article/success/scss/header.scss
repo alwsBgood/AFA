@@ -1,0 +1,207 @@
+@import "bourbon";
+@import "vars.scss";
+
+body {
+	position: relative;
+	font: 16px/24px $main_font;
+	color: $main_text_color;
+	background-color: #fff;
+}
+
+body.unscroll{
+	overflow: hidden;
+}
+
+.md-modal.md-show{
+    opacity: 1;
+  }
+.md-modal{
+    opacity: 0;
+  }
+
+/* SCROLL BAR STYLES*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+ /* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,  0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: $main_color;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $main_color;
+}
+
+.hidden{
+    height: 0;
+    width: 0;
+}
+
+.bar-long {
+	height: 5px;
+	width: 0;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $main_color;
+}
+
+.btn{
+    width: 270px;
+    height: 50px;
+    background-color: #2167fb;
+
+	color: #f0f0f0;
+	font: 12px/18px $main_font;
+	text-transform: uppercase;
+    letter-spacing: .3em;
+
+    &:hover{
+        background-color: #fb7657;
+    }
+    &:active{
+        background-color: #d05b40;
+    }
+}
+
+
+section{
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(img/sec_01-bg.png);
+    background-size: 100% 100%;
+    text-align: center;
+    min-height: 100vh;
+
+    .logo{margin-bottom: 100px;}
+    h1{
+        position: relative;
+        z-index: 2;
+        color: #f0f0f0;
+        font-family: $title_font;
+        font-size: 60px;
+        line-height: 76px;
+        text-transform: uppercase;
+    }
+    h1:before{
+        content: "";
+        position: absolute;
+        width: 470px;
+        height: 160px;
+        top: -10px;
+        left: 50%;
+        margin-left: -250px;
+        background: url(img/geometry.png);
+        animation: geometry 50s infinite linear;
+        z-index: -1;
+        background-repeat: no-repeat !important;
+    }
+
+    @keyframes geometry {
+      0%{
+        transform: translate(0px) scale(1);
+      }
+      10%{
+        transform: translate(20px, 20px) scale(.9);
+      }
+      20%{
+        transform: translate(-10px, -10px) scale(.8) ;
+      }
+      40%{
+        transform: translate(30px, 5px) scale(.9) ;
+      }
+      60%{
+        transform: translate(-5px, 20px) scale(.8) ;
+      }
+      80%{
+        transform: translate(20px, -10px) scale(.9);
+      }
+      100%{
+        transform: translate(0px) scale(1);
+      }
+    }
+
+    .separator{
+        margin: 30px 0 30px;
+    }
+    .text{
+        color: #66696e;
+        font-family: $title_font;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .btn{
+        margin: 55px auto 0;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+footer{
+  padding: 15px 0 15px;
+  background-color: #202020;
+  .politics{
+    margin-top: 17px;
+    a{
+      color: #65666a;
+      font-size: 14px;
+    }
+    a:hover{color: $main_color;}
+    a+a{margin-left: 10px;}
+  }
+  .logo_rezart{
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 80px;
+    // margin-right: 20px;
+    float: right;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px){
+  footer{
+    .politics a{
+      font-size: 13px;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+    [class*='col-']{width: 100%;}
+    section{
+        padding-top: 80px;
+        padding-bottom: 200px;
+    }
+    footer{
+      text-align: center;
+      .politics{
+        a{
+           font-size: 14px;
+           display: block;
+           text-align: center;
+         }
+       a+a{margin-left: 0 }
+      }
+      .logo_rezart{
+        display: inline-block;
+        float: none;
+        margin-top: 20px;
+      }
+    }
+}

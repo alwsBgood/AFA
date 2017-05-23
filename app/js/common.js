@@ -1,6 +1,6 @@
-if (localStorage.email){$('input[type="email"]').val(localStorage.email);}
-if (localStorage.name){$('input[name="name"]').val(localStorage.name);}
-if (localStorage.phone){$('input[type="tel"]').val(localStorage.phone);}
+if (localStorage.email != "undefined"){$('input[type="email"]').val(localStorage.email);}
+if (localStorage.name != "undefined"){$('input[name="name"]').val(localStorage.name);}
+if (localStorage.phone != "undefined"){$('input[type="tel"]').val(localStorage.phone);}
 
 $(function() {
   $("[name=send]").click(function (e) {
@@ -71,13 +71,6 @@ $(function() {
       'event': 'formSubmit',
       'form_type': goal,
       'calc_data' : calc_msg
-    });
-     // Отправка в Google sheets
-     $.ajax({
-      type: 'POST',
-      url: '',
-      dataType: 'json',
-      data: msg,
     });
     // Отправка на почту
     $.ajax({
