@@ -1133,7 +1133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Load Scripts Start -->
     <script>var scr = {"scripts":[
-        {"src" : "http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU", "async" : false},
+        // {"src" : "http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU", "async" : false},
         {"src" : "https://maps.googleapis.com/maps/api/js?key=AIzaSyATfi0TMf7-xe0An-ApHqaOr2z20XCXscM", "async" : false},
         {"src" : "js/libs.js", "async" : false},
         {"src" : "js/common.js", "async" : false}

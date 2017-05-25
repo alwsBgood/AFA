@@ -14,7 +14,9 @@ $(function() {
    var ref = btn.closest('form').find('[required]');
    var loc = ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country;
 
-   $('[name=city]').val(loc);
+   $.get("http://ipinfo.io", function(response) {
+    $('[name=city]').val(response.city + ', ' + response.country)
+   }, "jsonp");
    $('[name=kolichestvo_mesyacev]').val($('#slider_month-value').text());
    $('[name=summa_kredita]').val($('#slider_sum-value').text());
    $('[name=total_sum]').val($('#total_sum').text());
